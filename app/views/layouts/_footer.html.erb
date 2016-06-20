@@ -7,18 +7,18 @@
 	<div class="b">
 		<h4>ECOPROP</h4>
 		<ul>
-			<li>Inicio</li>
-			<li>Quienes Somos</li>
-			<li>Equipo</li>
+			<li><%= link_to "Inicio", root_path %></li>
+			<li><%= link_to "Quienes Somos", pages_about_path %></li>
+			<li><%= link_to "Equipo", "#" %></li>
 		</ul>
 	</div>
 
 	<div class="c">
 		<h4>ATENCION AL CLIENTE</h4>
 		<ul>
-			<li>Contacto</li>
-			<li>Confiar propiedad</li>
-			<li>Trabaja con nosotros</li>
+			<li><%= link_to "Contacto", pages_contact_path %></li>
+			<li><%= link_to "Confiar Propiedad", "#" %></li>
+			<li><%= link_to "Trabaja con nosotros", "#" %></li>
 		</ul>
 	</div>
 
@@ -31,8 +31,12 @@
 	</div>
 
 	<div class="e">
-		<h4>SIGUENOS</h4>
-		<img src="/assets/facebook.png" alt="facebook-logo">
-		<img src="/assets/email.png" alt="email-logo">
+		<div>
+			<h4>SIGUENOS</h4>
+		</div>
+		<div class="icons">
+			<img src="/assets/facebook.png" alt="facebook-logo">
+			<img src="/assets/email.png" alt="email-logo">
+		</div>
 	</div>
 </footer>

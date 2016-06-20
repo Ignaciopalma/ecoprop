@@ -1,8 +1,12 @@
 .main-slider {
-	@include outer-container;
+	@include outer-container(100%);
 
-	img {
+	div {
 		@include span-columns(12);
+
+		height: 650px; 
+		width: 100%; 
+		background-size: cover;
 	}
 }
 

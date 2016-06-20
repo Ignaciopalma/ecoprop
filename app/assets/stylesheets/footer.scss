@@ -5,5 +5,45 @@ footer {
 
 	div {
 		@include span-columns(2.2);
+		padding-top: 10px;
+
+		ul {
+			padding-left: 0;
+			padding-bottom: 15px;
+
+			li, a {
+				text-decoration: none;
+				list-style-type: none;
+			}
+		}
+	}
+
+	div:nth-child(4) {
+	    padding-top: 72px;
+	    width: 269px;
+	}
+
+	div.e {
+		@include outer-container(100%);
+
+		div {
+			@include span-columns(12);
+			text-align: center;
+		}
+
+		div.icons {
+			padding-left: 23%;
+			padding-top: 0;
+			img {
+				@include span-columns(6);
+
+				width: 45px;
+				height: 45px;
+			}
+
+			img:nth-child(1) {
+				margin-right: 28px;
+			}
+		}
 	}
 }
