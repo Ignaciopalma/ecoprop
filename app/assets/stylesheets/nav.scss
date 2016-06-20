@@ -1,0 +1,60 @@
+nav {
+	@include outer-container(100%);
+	border-bottom: 3px solid rgb(153, 504, 0);
+
+	height: 85px;
+
+	.logo {
+		@include span-columns(2);
+	}
+
+	.nav-links {
+		@include span-columns(10);
+		@include omega();
+		@include outer-container(100%);
+
+
+		border-top: 3px solid rgb(153, 504, 0);
+		margin-top: 30px;
+
+
+
+		ul {
+			@include span-columns(10);
+
+			margin-bottom:0;
+			padding-left: 0;
+
+			li:nth-child(1) {
+				width: 84px;
+			}
+
+			li:nth-child(2) {
+				width: 156px;
+				
+			}
+
+			li:nth-child(3) {
+				width: 78px;
+				
+			}
+
+			li:nth-child(4) {
+				width: 160px;
+				
+			}
+		}
+
+		li, a {
+			@include span-columns(2);
+
+			display: inline;
+			text-decoration: none;
+			font-size: 14px;
+		}
+
+		div {
+			@include span-columns(2);
+		}
+	}
+}

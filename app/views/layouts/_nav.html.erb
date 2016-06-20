@@ -1,12 +1,19 @@
 <nav>
-	
-	<h1>ECOPROP</h1>
+	<div class="logo"><h1>ECOPROP</h1></div>
 
-	<ul>
-		<li>INICIO</li>
-		<li>QUIENES SOMOS</li>
-		<li>CASAS</li>
-		<li>DEPARTAMENTOS</li>
-		<li>TERRENOS</li>
-	</ul>
+	<div class="nav-links">
+		<ul>
+			<li><%= link_to "INICIO", root_path %></li>
+			<li><%= link_to "QUIENES_SOMOS", "#" %></li>
+			<li><%= link_to "CASAS", "#" %></li>
+			<li><%= link_to "DEPARTAMENTOS", "#" %></li>
+			<li><%= link_to "TERRENOS", "#" %></li>
+		</ul>
+
+		<div>
+			<ul>
+				<li><%= link_to "CONTACTO", "#" %></li>
+			</ul>
+		</div>
+	</div>
 </nav>

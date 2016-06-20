@@ -1,0 +1,9 @@
+footer {
+	@include outer-container(100%);
+	border-top: 3px solid rgb(153, 504, 0);
+
+
+	div {
+		@include span-columns(2.2);
+	}
+}
