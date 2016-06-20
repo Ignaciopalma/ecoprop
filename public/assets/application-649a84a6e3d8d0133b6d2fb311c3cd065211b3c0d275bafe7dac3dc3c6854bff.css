@@ -1,0 +1,358 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+/* line 4, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_box-sizing.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 9, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_box-sizing.scss */
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/* http://ilikekillnerds.com/2010/12/a-solution-to-stop-font-face-fonts-looking-bold-on-mac-browsers/ */
+/* line 3, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/fonts.scss */
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'BlocC';
+  src: url("/assets/blockbe-condensed.woff2") format("woff2"), url("/assets/blockbe-condensed.woff") format("woff");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LaskiSlab-Regular';
+  src: url("/assets/LaskiSlab-Regular.woff2") format("woff2"), url("/assets/LaskiSlab-Regular.woff") format("woff");
+  /* Modern Browsers */
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LaskiSlab-ExtraLight';
+  src: url("/assets/LaskiSlab-ExtraLight.woff2") format("woff2"), url("/assets/LaskiSlab-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LaskiSlab-Bold';
+  src: url("/assets/LaskiSlab-Bold.woff2") format("woff2"), url("/assets/LaskiSlab-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+/* ***************** ***************** ***************** */
+/* 00. VARIABLES */
+/* ***************** ***************** ***************** */
+/* line 1, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 3px solid #99ff00;
+  height: 85px;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+nav::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 7, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .logo {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+nav .logo:last-child {
+  margin-right: 0;
+}
+/* line 11, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .nav-links {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  margin-right: 0;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 3px solid #99ff00;
+  margin-top: 30px;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+nav .nav-links:last-child {
+  margin-right: 0;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+nav .nav-links::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 22, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .nav-links ul {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+nav .nav-links ul:last-child {
+  margin-right: 0;
+}
+/* line 28, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .nav-links ul li:nth-child(1) {
+  width: 84px;
+}
+/* line 32, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .nav-links ul li:nth-child(2) {
+  width: 156px;
+}
+/* line 37, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .nav-links ul li:nth-child(3) {
+  width: 78px;
+}
+/* line 42, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .nav-links ul li:nth-child(4) {
+  width: 160px;
+}
+/* line 48, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .nav-links li, nav .nav-links a {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+  display: inline;
+  text-decoration: none;
+  font-size: 14px;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+nav .nav-links li:last-child, nav .nav-links a:last-child {
+  margin-right: 0;
+}
+/* line 56, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .nav-links div {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+nav .nav-links div:last-child {
+  margin-right: 0;
+}
+
+/* line 1, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.main-slider {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.main-slider::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 4, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.main-slider div {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  height: 650px;
+  width: 100%;
+  background-size: cover;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.main-slider div:last-child {
+  margin-right: 0;
+}
+
+/* line 13, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.propiedades-destacadas {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.propiedades-destacadas::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 16, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.propiedades-destacadas h2 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  text-align: center;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.propiedades-destacadas h2:last-child {
+  margin-right: 0;
+}
+/* line 21, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.propiedades-destacadas img {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.propiedades-destacadas img:last-child {
+  margin-right: 0;
+}
+
+/* line 26, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.comunas {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.comunas::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 29, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.comunas h2 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-left: 25.58941%;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.comunas h2:last-child {
+  margin-right: 0;
+}
+/* line 34, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.comunas img {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.comunas img:last-child {
+  margin-right: 0;
+}
+
+/* line 1, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 3px solid #99ff00;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+footer::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 6, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer div {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 16.40792%;
+  padding-top: 10px;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+footer div:last-child {
+  margin-right: 0;
+}
+/* line 10, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer div ul {
+  padding-left: 0;
+  padding-bottom: 15px;
+}
+/* line 14, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer div ul li, footer div ul a {
+  text-decoration: none;
+  list-style-type: none;
+}
+/* line 21, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer div:nth-child(4) {
+  padding-top: 72px;
+  width: 269px;
+}
+/* line 26, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer div.e {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+footer div.e::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 29, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer div.e div {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  text-align: center;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+footer div.e div:last-child {
+  margin-right: 0;
+}
+/* line 34, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer div.e div.icons {
+  padding-left: 23%;
+  padding-top: 0;
+}
+/* line 37, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer div.e div.icons img {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  width: 45px;
+  height: 45px;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+footer div.e div.icons img:last-child {
+  margin-right: 0;
+}
+/* line 44, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer div.e div.icons img:nth-child(1) {
+  margin-right: 28px;
+}
+
+/* line 35, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/application.scss */
+body {
+  background-color: #003333;
+}
+
+/* line 38, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/application.scss */
+h1, h2, h3, h4, h5, li, a, p, address {
+  color: white;
+}
