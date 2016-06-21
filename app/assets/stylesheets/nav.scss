@@ -6,6 +6,10 @@ nav {
 
 	.logo {
 		@include span-columns(2);
+
+		img {
+			width: 170px;
+		}
 	}
 
 	.nav-links {
@@ -14,7 +18,7 @@ nav {
 		@include outer-container(100%);
 
 
-		border-top: 3px solid rgb(153, 504, 0);
+		// border-top: 3px solid rgb(153, 504, 0);
 		margin-top: 30px;
 
 

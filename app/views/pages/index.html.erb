@@ -1,26 +1,111 @@
-<div class="main-slider">
-	<div style="background-image: url(/assets/banca.jpg)">		
+<div class="body-container">
+	<div class="main">
+		<div class="main-slider">
+			<div style="background-image: url(/assets/banca.jpg)">
+				<h2>CONFIANZA</h2>	
+			</div>
+			<div style="background-image: url(/assets/hojas.jpg)">
+				<h2>PRESTIGIO</h2>		
+			</div>
+			<div style="background-image: url(/assets/calle.jpg)">		
+				<h2>COMODIDAD</h2>
+			</div>
+		</div>
+		<div class="contactar">
+			<h3>QUIERES QUE TE BUSQUEMOS UNA PROPIEDAD PARA TUS NECESIDADES?</h3>
+			<h3 class="link"><%= link_to "CONTACTAR", "#" %></h3>
+		</div>
 	</div>
-</div>
 
-<div class="propiedades-destacadas">
-	<h2>PROPIEDADES DESTACADAS</h2>
+	<h2>PROPIEDADES DESTACADAS</h2>	
 
-	<div>
-		<img src="/assets/parcela.jpg" alt="">
+	<div class="propiedades-destacadas">
+		<div>
+			<img src="/assets/parcela.jpg" alt="">
+			<h3>VENTA DE CASA DE CAMPO</h3>
+			<p>DARIO URZUA</p>
+			<p>250 UF</p>
+			<p>200 m2</p>
+		</div>
+		<div>
+			<img src="/assets/cerro.jpg" alt="">
+			<h3>VENTA DE CASA DE CAMPO</h3>
+			<p>DARIO URZUA</p>
+			<p>250 UF</p>
+			<p>200 m2</p>
+		</div>
+		<div>
+			<img src="/assets/campo.jpg" alt="">
+			<h3>VENTA DE CASA DE CAMPO</h3>
+			<p>DARIO URZUA</p>
+			<p>250 UF</p>
+			<p>200 m2</p>
+		</div>
+		<div>
+			<img src="/assets/parcela.jpg" alt="">
+			<h3>VENTA DE CASA DE CAMPO</h3>
+			<p>DARIO URZUA</p>
+			<p>250 UF</p>
+			<p>200 m2</p>
+		</div>
+		<div>
+			<img src="/assets/cerro.jpg" alt="">
+			<h3>VENTA DE CASA DE CAMPO</h3>
+			<p>DARIO URZUA</p>
+			<p>250 UF</p>
+			<p>200 m2</p>
+		</div>
+		<div>
+			<img src="/assets/campo.jpg" alt="">
+			<h3>VENTA DE CASA DE CAMPO</h3>
+			<p>DARIO URZUA</p>
+			<p>250 UF</p>
+			<p>200 m2</p>
+		</div>
 	</div>
-	<div>
-		<img src="/assets/cerro.jpg" alt="">
-	</div>
-	<div>
-		<img src="/assets/campo.jpg" alt="">
-	</div>
-</div>
 
-<div class="comunas">
 	<h2>COMUNAS</h2>
-
-	<img src="/assets/parcela.jpg" alt="">
-	<img src="/assets/cerro.jpg" alt="">
-	<img src="/assets/campo.jpg" alt="">
+	<div class="comunas">
+		<div>
+			<img src="/assets/parcela.jpg" alt="">
+		</div>
+		<div>
+			<img src="/assets/cerro.jpg" alt="">
+		</div>
+		<div>
+			<img src="/assets/campo.jpg" alt="">
+		</div>
+		<div>
+			<img src="/assets/parcela.jpg" alt="">
+		</div>
+		<div>
+			<img src="/assets/cerro.jpg" alt="">
+		</div>
+		<div>
+			<img src="/assets/campo.jpg" alt="">
+		</div>
+	</div>
 </div>
+
+<script>
+	$(document).ready(function(){
+		$('.main-slider').slick({
+			draggable: true,
+			dots: true,
+			fade: true,
+			speed: 1500,
+			autoplay: true
+		});
+
+		$('.propiedades-destacadas').slick({
+			slidesToShow: 3,
+			draggable: true
+		});
+
+		$('.comunas').slick({
+			slidesToShow: 3,
+			draggable: true,
+		});
+
+	});
+</script>
