@@ -1,0 +1,89 @@
+<%= form_for(@property) do |f| %>
+  <% if @property.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@property.errors.count, "error") %> prohibited this property from being saved:</h2>
+
+      <ul>
+      <% @property.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.number_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :rooms %><br>
+    <%= f.number_field :rooms %>
+  </div>
+  <div class="field">
+    <%= f.label :toilets %><br>
+    <%= f.number_field :toilets %>
+  </div>
+  <div class="field">
+    <%= f.label :floors %><br>
+    <%= f.number_field :floors %>
+  </div>
+  <div class="field">
+    <%= f.label :total_area %><br>
+    <%= f.number_field :total_area %>
+  </div>
+  <div class="field">
+    <%= f.label :house_area %><br>
+    <%= f.number_field :house_area %>
+  </div>
+  <div class="field">
+    <%= f.label :pool %><br>
+    <%= f.check_box :pool %>
+  </div>
+  <div class="field">
+    <%= f.label :furnished %><br>
+    <%= f.check_box :furnished %>
+  </div>
+  <div class="field">
+    <%= f.label :parking %><br>
+    <%= f.number_field :parking %>
+  </div>
+  <div class="field">
+    <%= f.label :cellar %><br>
+    <%= f.check_box :cellar %>
+  </div>
+  <div class="field">
+    <%= f.label :house %><br>
+    <%= f.check_box :house %>
+  </div>
+  <div class="field">
+    <%= f.label :apartment %><br>
+    <%= f.check_box :apartment %>
+  </div>
+  <div class="field">
+    <%= f.label :terreain %><br>
+    <%= f.check_box :terreain %>
+  </div>
+  <div class="field">
+    <%= f.label :common_expenses %><br>
+    <%= f.number_field :common_expenses %>
+  </div>
+  <div class="field">
+    <%= f.label :district %><br>
+    <%= f.text_field :district %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

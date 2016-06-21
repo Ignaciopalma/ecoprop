@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :properties
   root "pages#index"
   
   get 'pages/index'

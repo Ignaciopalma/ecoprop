@@ -1,0 +1,92 @@
+<p id="notice"><%= notice %></p>
+
+<div class="properties-index">
+
+    <h1>TODAS LAS PROPIEDADES</h1>
+
+    <% @properties.each do |property| %>
+    <div class="list-container">    
+        <img src="/assets/campo.jpg" alt="casa-campo">
+
+        <div>
+            <div class="property-title">
+                <h2><%= property.address %>, <%= property.district %>, <%= property.city %></h2>
+                <h3><%= property.description %></h3>
+            </div>
+
+            <div class="property-specs">
+                <p>Precio: <%= property.price %> UF</p>
+                <p>Superficie Total<%= property.total_area %></p>
+                <p>Dormitorios: <%= property.rooms %></p>
+                <p>Baños: <%= property.toilets %></p>
+            </div>
+
+            <button><%= link_to "VER PROPIEDAD", property %></button>
+        </div>
+    </div>
+    <% end %>    
+
+</div>
+
+    
+
+
+    <h1>Listing Properties</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Address</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Rooms</th>
+                <th>Toilets</th>
+                <th>Floors</th>
+                <th>Total area</th>
+                <th>House area</th>
+                <th>Pool</th>
+                <th>Furnished</th>
+                <th>Parking</th>
+                <th>Cellar</th>
+                <th>House</th>
+                <th>Apartment</th>
+                <th>Terreain</th>
+                <th>Common expenses</th>
+                <th>District</th>
+                <th>City</th>
+                <th colspan="3"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+        <% @properties.each do |property| %>
+            <tr>
+            <td><%= property.address %></td>
+            <td><%= property.price %></td>
+            <td><%= property.description %></td>
+            <td><%= property.rooms %></td>
+            <td><%= property.toilets %></td>
+            <td><%= property.floors %></td>
+            <td><%= property.total_area %></td>
+            <td><%= property.house_area %></td>
+            <td><%= property.pool %></td>
+            <td><%= property.furnished %></td>
+            <td><%= property.parking %></td>
+            <td><%= property.cellar %></td>
+            <td><%= property.house %></td>
+            <td><%= property.apartment %></td>
+            <td><%= property.terreain %></td>
+            <td><%= property.common_expenses %></td>
+            <td><%= property.district %></td>
+            <td><%= property.city %></td>
+            <td><%= link_to 'Show', property %></td>
+            <td><%= link_to 'Edit', edit_property_path(property) %></td>
+            <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+        <% end %>
+        </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'New Property', new_property_path %>

@@ -1,0 +1,95 @@
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @property.address %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @property.price %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @property.description %>
+</p>
+
+<p>
+  <strong>Piezas:</strong>
+  <%= @property.rooms %>
+</p>
+
+<p>
+  <strong>Baños:</strong>
+  <%= @property.toilets %>
+</p>
+
+<p>
+  <strong>Pisos:</strong>
+  <%= @property.floors %>
+</p>
+
+<p>
+  <strong>Superficie Total:</strong>
+  <%= @property.total_area %>
+</p>
+
+<p>
+  <strong>Superficie Construida:</strong>
+  <%= @property.house_area %>
+</p>
+
+<p>
+  <strong>Piscina:</strong>
+  <%= @property.pool %>
+</p>
+
+<p>
+  <strong>Amoblado:</strong>
+  <%= @property.furnished %>
+</p>
+
+<p>
+  <strong>Estacionamiento:</strong>
+  <%= @property.parking %>
+</p>
+
+<p>
+  <strong>Bodega:</strong>
+  <%= @property.cellar %>
+</p>
+
+<p>
+  <strong>Casa:</strong>
+  <%= @property.house %>
+</p>
+
+<p>
+  <strong>Departamento:</strong>
+  <%= @property.apartment %>
+</p>
+
+<p>
+  <strong>Terreno:</strong>
+  <%= @property.terreain %>
+</p>
+
+<p>
+  <strong>Gastos Comunes:</strong>
+  <%= @property.common_expenses %>
+</p>
+
+<p>
+  <strong>Comuna:</strong>
+  <%= @property.district %>
+</p>
+
+<p>
+  <strong>Ciudad:</strong>
+  <%= @property.city %>
+</p>
+
+<%= link_to 'Editar Propiedad', edit_property_path(@property) %> |
+<%= link_to 'Volver', properties_path %>

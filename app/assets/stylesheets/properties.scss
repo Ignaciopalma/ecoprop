@@ -1,0 +1,79 @@
+// Place all the styles related to the properties controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/****************** 
+
+1.0 PROPERTIES INDEX 
+
+********************/
+
+.properties-index {
+	@include outer-container;
+
+	h1 {
+		text-align: center;
+		margin-bottom: 20px;
+		margin-top: 40px;
+	}
+
+	div.list-container {
+		@include outer-container;
+
+		border-bottom: 3px solid rgb(153, 504, 0);
+		padding-bottom: 35px;
+		padding-top: 35px;
+
+		img {
+			@include span-columns(3);
+
+			border: 3px solid $verde-claro;
+		}
+
+		div {
+			@include span-columns(9);
+			@include omega();
+
+			.property-title {
+				@include span-columns(12);
+
+				h2 {
+					margin: 0;
+				}
+
+				h3 {
+					margin-top: 0;
+				}
+			}
+
+			.property-specs {
+				@include span-columns(6);
+
+				p:nth-child(1) {
+					margin-bottom: 0; 
+				}
+
+				p {
+					margin: 0;
+				}
+			}
+
+			button {
+				@include span-columns(6);
+
+				width: 25%;
+				margin-left: 75px;
+    			margin-top: 20px;
+    			height: 35px;
+    			background-color: $verde-claro;
+    			border: 1px solid rgba(5, 93, 5, 1);
+
+    			a {
+    				text-decoration: none;
+    				color: grey;
+    			}
+			}
+		}
+	}
+}
+

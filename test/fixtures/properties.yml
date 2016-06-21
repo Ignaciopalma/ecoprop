@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address: MyString
+  price: 1
+  description: MyText
+  rooms: 1
+  toilets: 1
+  floors: 1
+  total_area: 1
+  house_area: 1
+  pool: false
+  furnished: false
+  parking: 1
+  cellar: false
+  house: false
+  apartment: false
+  terreain: false
+  common_expenses: 1
+  district: MyString
+  city: MyString
+
+two:
+  address: MyString
+  price: 1
+  description: MyText
+  rooms: 1
+  toilets: 1
+  floors: 1
+  total_area: 1
+  house_area: 1
+  pool: false
+  furnished: false
+  parking: 1
+  cellar: false
+  house: false
+  apartment: false
+  terreain: false
+  common_expenses: 1
+  district: MyString
+  city: MyString
