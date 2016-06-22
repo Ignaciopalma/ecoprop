@@ -1,95 +1,58 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Direccion:</strong>
-  <%= @property.address %>
-</p>
+<div class="property-show">
+    <div>
+        <h2><%= @property.address %></h2>
 
-<p>
-  <strong>Precio:</strong>
-  <%= @property.price %>
-</p>
+        <h3><%= @property.description %></h3>
 
-<p>
-  <strong>Descripcion:</strong>
-  <%= @property.description %>
-</p>
+        <h4><%= @property.price %></h4>
+    </div>
+    
+    <div class="property-container">
+        <div class="property-specs">
+            <div>   
+                <h6>Comuna:</h6>
+                <p><%= @property.district %></p>
+            </div>
+            <div>
+                <h6>Superficie Total</h6>
+                <p><%= @property.total_area %></p>
+            </div>
+            <div>
+                <h6>Nº de Dormitorios:</h6>
+                <p><%= @property.rooms %></p>
+            </div>
+            <div>
+                <h6>Nº de Baños:</h6>
+                <p><%= @property.toilets %></p>
+            </div>
+        </div>
 
-<p>
-  <strong>Piezas:</strong>
-  <%= @property.rooms %>
-</p>
+        <div class="property-image">
+            <img src="/assets/campo.jpg" alt="casa campo">
+        </div>
 
-<p>
-  <strong>Baños:</strong>
-  <%= @property.toilets %>
-</p>
+        <div class="property-footer">
+            <div class="description">
+                <h3>COMENTARIOS Y ATRIBUTOS DE LA PROPIEDAD</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores sit, incidunt quasi nobis! Quod provident atque aliquid labore tempore impedit sequi quas asperiores, repellendus dignissimos dolor, dolores nemo, ipsa dicta?</p>
+            </div>
 
-<p>
-  <strong>Pisos:</strong>
-  <%= @property.floors %>
-</p>
+            <div class="contact-buttons">
+                <button><%= link_to "SOLICITAR VISITA", "#" %></button>
+                <button><%= link_to "SOLICITAR INFO", "#" %></button>
+                <button><%= link_to "CONTACTO", "#" %></button>
+            </div>
+        </div>
+    </div>
 
-<p>
-  <strong>Superficie Total:</strong>
-  <%= @property.total_area %>
-</p>
+    <p><%= link_to 'Volver', properties_path %></p>
+    <p><%= link_to 'Editar Propiedad', edit_property_path(@property) %></p>
+</div>
 
-<p>
-  <strong>Superficie Construida:</strong>
-  <%= @property.house_area %>
-</p>
 
-<p>
-  <strong>Piscina:</strong>
-  <%= @property.pool %>
-</p>
 
-<p>
-  <strong>Amoblado:</strong>
-  <%= @property.furnished %>
-</p>
 
-<p>
-  <strong>Estacionamiento:</strong>
-  <%= @property.parking %>
-</p>
 
-<p>
-  <strong>Bodega:</strong>
-  <%= @property.cellar %>
-</p>
-
-<p>
-  <strong>Casa:</strong>
-  <%= @property.house %>
-</p>
-
-<p>
-  <strong>Departamento:</strong>
-  <%= @property.apartment %>
-</p>
-
-<p>
-  <strong>Terreno:</strong>
-  <%= @property.terreain %>
-</p>
-
-<p>
-  <strong>Gastos Comunes:</strong>
-  <%= @property.common_expenses %>
-</p>
-
-<p>
-  <strong>Comuna:</strong>
-  <%= @property.district %>
-</p>
-
-<p>
-  <strong>Ciudad:</strong>
-  <%= @property.city %>
-</p>
-
-<%= link_to 'Editar Propiedad', edit_property_path(@property) %> |
-<%= link_to 'Volver', properties_path %>

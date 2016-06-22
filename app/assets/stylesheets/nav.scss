@@ -57,6 +57,10 @@ nav {
 			font-size: 14px;
 		}
 
+		li:hover {
+			background-color: $verde-claro;
+		}
+
 		div {
 			@include span-columns(2);
 		}

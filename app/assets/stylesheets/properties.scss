@@ -34,7 +34,7 @@
 			@include span-columns(9);
 			@include omega();
 
-			.property-title {
+			.properties-title {
 				@include span-columns(12);
 
 				h2 {
@@ -46,7 +46,7 @@
 				}
 			}
 
-			.property-specs {
+			.properties-specs {
 				@include span-columns(6);
 
 				p:nth-child(1) {
@@ -76,4 +76,178 @@
 		}
 	}
 }
+
+
+/****************** 
+
+1.0 PROPERTIES SHOW
+
+********************/
+
+.property-show {
+	@include outer-container;
+	
+	div {
+		@include outer-container;
+
+		h2 {
+			@include span-columns(12);
+
+			margin-bottom: 0;
+		}
+
+		h3 {
+			@include span-columns(9);
+
+			margin-bottom: 0;
+		}
+
+		h4 {
+			@include span-columns(3);
+			@include omega();
+
+			margin-bottom: 0;
+			text-align: right;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-right: 20px;
+			background-color: $verde-claro;
+		}
+	}
+
+	div.property-container {
+		@include outer-container;
+
+		border: 2px solid $verde-claro;
+
+		.property-specs {
+			@include span-columns(4);
+
+			div {
+				@include outer-container(100%);
+
+				border-bottom: 1px solid $verde-claro;
+				margin-left: 10px;
+				margin-right: 0px;
+
+				h6 {
+					@include span-columns(6);
+
+					margin-bottom: 10px;
+				}
+
+				p {
+					@include span-columns(6);
+					@include omega();
+
+					text-align: right;
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.property-image {
+			@include span-columns(8);
+			@include omega();
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.property-footer {
+			@include outer-container;
+			@include span-columns(12);
+
+			margin-top: 30px;
+			margin-bottom: 20px;
+
+			.description {
+				@include span-columns(8);
+
+				padding-left: 10px; 
+
+				h3 {
+					@include span-columns(12);
+				}
+
+				p {
+					@include span-columns(12);
+
+					text-align: left;
+				}
+			}
+
+			.contact-buttons {
+				@include span-columns(4);
+				@include omega();
+
+				button {
+					@include span-columns(12);
+					@include omega();
+
+					width: 94%;
+					margin: 10px;
+					background-color: $verde-claro;
+				}
+			}
+		}
+	}
+
+	p, a {
+		text-align: right;
+		text-decoration: none;
+
+		a:hover {
+			color: $verde-claro;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
