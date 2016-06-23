@@ -58,6 +58,11 @@
 				}
 			}
 
+			a {
+				text-decoration: none;
+				color: grey;
+			}
+
 			button {
 				@include span-columns(6);
 
@@ -67,13 +72,12 @@
     			height: 35px;
     			background-color: $verde-claro;
     			border: 1px solid rgba(5, 93, 5, 1);
-
-    			a {
-    				text-decoration: none;
-    				color: grey;
-    			}
 			}
 		}
+	}
+
+	div.list-container:last-child {
+		border-bottom: none;
 	}
 }
 
@@ -130,7 +134,7 @@
 				margin-left: 10px;
 				margin-right: 0px;
 
-				h6 {
+				h5 {
 					@include span-columns(6);
 
 					margin-bottom: 10px;

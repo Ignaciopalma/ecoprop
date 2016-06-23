@@ -15,6 +15,7 @@
 @import "bourbon";
 @import "neat";
 @import "fonts";
+@import "base/base";
 
 /* ***************** ***************** ***************** */
 /* 00. VARIABLES */
@@ -26,11 +27,12 @@ $secondary-font: 			'BlocC', 'Impact', 'Arial Black', sans-serif;
 $titles-font: 				'LaskiSlab-ExtraLight', 'Georgia', 'Times', serif;
 $negritas-font: 			'LaskiSlab-Bold', 'Georgia', 'Times', serif;
 
-
 @import "nav";
 @import "body";
 @import "footer";
 @import "properties";
+@import "contact";
+@import "media-queries";
 
 
 

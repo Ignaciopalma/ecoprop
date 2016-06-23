@@ -1,0 +1,14 @@
+/* ***************** */
+/* DESKTOP */
+/* ***************** */
+@media (min-width: 320px) and (max-width: 568px) {
+    nav {
+        display: none;
+    }
+}
+
+@media (min-width: 568px) {
+    .slicknav_menu {
+        display: none;
+    }
+}

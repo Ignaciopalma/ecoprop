@@ -1,0 +1,40 @@
+.contact-page {
+	@include outer-container;
+	padding-bottom: 80px;
+
+	h1 {
+		text-align: center;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	div.contact-form {
+		@include span-columns(7);
+
+		border-right: 2px solid $verde-claro;
+
+		form {
+			padding: 0 15%;
+
+			::-webkit-input-placeholder { color: grey; }
+
+			input {
+				background-color: $verde-claro;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	div.contact-info {
+		@include span-columns(5);
+		@include omega();
+
+		height: 440px;
+		padding: 7%;
+
+		p {
+			margin-bottom: 0;
+			padding-left: 12px;
+		}
+	}
+}
