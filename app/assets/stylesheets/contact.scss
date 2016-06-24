@@ -22,6 +22,16 @@
 				background-color: $verde-claro;
 				margin-bottom: 0;
 			}
+
+			::-webkit-input-placeholder {
+		   		color: #fff;
+		   		font-size: 13px;
+			}
+
+			textarea {
+				background-color: $verde-claro;
+
+			}
 		}
 	}
 
@@ -38,3 +48,4 @@
 		}
 	}
 }
+
