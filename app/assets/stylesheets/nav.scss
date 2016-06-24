@@ -24,7 +24,7 @@ $dropdown-arrow-top-distance: 0;
 
 nav {
 	@include outer-container(100%);
-	border-bottom: 3px solid rgb(153, 504, 0);
+	border-bottom: 3px solid $verde-claro;
 
 	height: 85px;
 
