@@ -41,7 +41,9 @@ nav {
 		@include omega();
 
 		padding-top: 26px;
-    	padding-left: 237px;
+    	padding-left: 384px;
+   	    font-size: 13px;
+   		font-weight: bold;
 
     	.dropdown:nth-child(3) {
 			.dropdown-container {
