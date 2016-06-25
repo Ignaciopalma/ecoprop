@@ -2,7 +2,9 @@
 	h2 {
 		text-align: center;
 		margin-top: 65px;
-		margin-bottom: 0;
+		margin-bottom: 3r5px;
+		font-size: 22px;
+
 	}
 
 	.main {
@@ -15,13 +17,13 @@
 			div {
 				@include span-columns(12);
 
-				height: 650px; 
+				height: 570px; 
 				background-size: cover;
 				margin-right: 0;
 
 				h2 {
 					font-size: 4em;
-					margin-top: 275px;
+					margin-top: 190px;
 				}
 			}
 
@@ -43,7 +45,7 @@
 			@include outer-container(100%);
 
 			height: 150px;
-			background-color: rgba(30, 30, 30, 0.6);
+			background-color: rgba(241, 220, 144, 0.49);
 			margin-top: -230px;
 			position: relative;
 
@@ -51,21 +53,23 @@
 				@include span-columns(9);
 				position: absolute;
 				padding-top: 60px;
-	    		padding-left: 20px;
+	    		padding-left: 50px;
 			}
 
-			h3.link {
-				@include span-columns(3);
-
-				background-color: brown;
+			a {
 				text-decoration: none;
-				position: absolute;
-				margin-left: 900px;
-				width: 189px;
-				padding: 20px;
 
-				a {
+				button.link {
+					@include span-columns(3);
+
+					background-color: #f1dc90;
 					text-decoration: none;
+					position: absolute;
+					margin-left: 900px;
+					margin-top: 45px;
+					width: 189px;
+					padding: 20px;
+					color: $verde-musgo;
 				}
 			}
 		}
@@ -87,6 +91,7 @@
 
 		h2 {
 			text-align: center;
+			padding-bottom: 10px;
 		}
 
 		h3, p {
