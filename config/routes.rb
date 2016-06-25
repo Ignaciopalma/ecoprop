@@ -3,12 +3,15 @@ Rails.application.routes.draw do
   resources :properties
   root "pages#index"
   
+  # prueba de otra forma de hacer el contact form
   post 'pages/contact' => 'pages#contact'
+
   get 'pages/index'
 
   get 'pages/about'
 
   get 'pages/contact'
+  resources :contact_forms
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
