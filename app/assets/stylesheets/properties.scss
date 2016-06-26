@@ -104,6 +104,7 @@
 			@include span-columns(9);
 
 			margin-bottom: 0;
+			padding-top: 5px;
 		}
 
 		h4 {
@@ -127,25 +128,62 @@
 		.property-specs {
 			@include span-columns(4);
 
-			div {
+			.details {
+				div {
+					@include outer-container(100%);
+
+					border-bottom: 1px solid $verde-claro;
+					margin-left: 10px;
+					margin-right: 0px;
+
+					h5 {
+						@include span-columns(6);
+
+						margin-bottom: 0;
+						padding-top: 21px;
+					}
+
+					p {
+						@include span-columns(6);
+						@include omega();
+
+						text-align: right;
+						margin-bottom: 0;
+						padding-top: 16px;
+					}
+				}
+			}
+
+			.price {
 				@include outer-container(100%);
 
-				border-bottom: 1px solid $verde-claro;
-				margin-left: 10px;
-				margin-right: 0px;
+				padding-top: 291px;
 
-				h5 {
-					@include span-columns(6);
+				div:first-child {
+					@include outer-container;
 
-					margin-bottom: 10px;
+					border-bottom: 1px solid $verde-claro;
+					margin-left: 10px;
+
+					h2 {
+						@include span-columns(6);
+
+						padding-top: 5px;
+					}
+
+					p {
+						@include span-columns(6);
+						@include omega();
+
+			   			margin-bottom: 4px;
+    					padding-top: 4px;
+					}
 				}
 
-				p {
-					@include span-columns(6);
-					@include omega();
-
-					text-align: right;
-					margin-bottom: 0;
+				div:last-child {
+					p {
+						padding-top: 5px;
+					}
 				}
 			}
 		}
@@ -179,6 +217,7 @@
 					@include span-columns(12);
 
 					text-align: left;
+					padding-top: 30px;
 				}
 			}
 

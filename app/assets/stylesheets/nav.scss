@@ -123,6 +123,17 @@ nav {
 		display: inline-block;
 		position: relative;
 		text-align: center;
+
+		.dropdown-menu {
+			a {
+				li {
+					border-bottom: $dropdown-inner-border;
+					color: $dropdown-color;
+					list-style: none;
+					padding: $dropdown-padding / 2;
+				}
+			}
+		}
 	}
 
 	.dropdown-button {

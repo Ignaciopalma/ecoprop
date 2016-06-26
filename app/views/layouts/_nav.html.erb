@@ -22,10 +22,22 @@
 		  <div class="dropdown-container">
 		    <p class="dropdown-button">EN VENTA</p>
 		    <ul class="dropdown-menu dropdown-select">
-		      <li><%= link_to "Todos", properties_path %></li>
-		      <li><%= link_to "Casas", sales_house_path %></li>
-		      <li><%= link_to "Departamentos", sales_apartment_path %></li>
-		      <li><%= link_to "Terrenos", sales_terrain_path %></li>
+
+				<%= link_to properties_path do %>
+					<li>Todos</li>
+				<% end %>
+
+				<%= link_to sales_house_path do %>
+					<li>Casas</li>
+				<% end %>
+
+				<%= link_to sales_apartment_path do %>
+					<li>Departamentos</li>
+				<% end %>
+
+				<%= link_to sales_terrain_path do %>
+					<li>Terreno</li>
+				<% end %>
 		    </ul>
 		  </div>
 		</div>
@@ -34,10 +46,22 @@
 		  <div class="dropdown-container">
 		    <p class="dropdown-button">EN ARRIENDO</p>
 		    <ul class="dropdown-menu dropdown-select">
-		      <li><%= link_to "Todos", root_path %></li>
-		      <li><%= link_to "Casas", rents_house_path %></li>
-		      <li><%= link_to "Departamentos", rents_apartment_path %></li>
-		      <li><%= link_to "Terrenos", rents_terrain_path %></li>
+
+				<%= link_to properties_path do %>
+					<li>Todos</li>
+				<% end %>
+
+				<%= link_to rents_house_path do %>
+					<li>Casas</li>
+				<% end %>
+
+				<%= link_to rents_apartment_path do %>
+					<li>Departamentos</li>
+				<% end %>
+
+				<%= link_to rents_terrain_path do %>
+					<li>Terreno</li>
+				<% end %>
 		    </ul>
 		  </div>
 		</div>
