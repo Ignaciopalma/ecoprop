@@ -9,6 +9,10 @@ class PagesController < ApplicationController
  
 	end
 
+	def panel
+		@messages = ContactForm.all
+	end
+
 	private
 
 	def contact_form_params

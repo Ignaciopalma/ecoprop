@@ -1,0 +1,15 @@
+<div class="panel">
+	<h1>Panel de Administracion</h1>
+
+	<h2>Mensajes</h2>
+
+	<% @messages.each do |m| %>
+	<div class="list-container">
+		<p>Nombre: <%= m.name %></p>
+		<p>Telefono: <%= m.phone %> </p>
+		<p>Email: <%= m.email %></p>
+		<p>Asunto: <%= m.subject %></p>
+		<p>Mensaje: <%= m.message %></p>
+	</div>
+	<% end %>
+</div>

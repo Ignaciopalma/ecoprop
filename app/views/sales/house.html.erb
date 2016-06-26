@@ -1,0 +1,34 @@
+<div class="properties-index">
+
+	<h1>CASAS EN VENTA</h1>
+
+	<% if @houses_for_sale.count == 0 %>
+		<h2>No hay Casas en Venta Aun!</h2>
+		<h3>Vueva Pronto =)</h3>
+	<% else %>
+		<% @houses_for_sale.each do |property| %>
+		<div class="list-container">    
+		    <img src="https://s3-us-west-2.amazonaws.com/ecoprop/campo.jpg" alt="casa-campo">
+
+		    <div>
+		        <div class="properties-title">
+		            <h2><%= property.address %>, <%= property.district %>, <%= property.city %></h2>
+		            <h3><%= property.description %></h3>
+		        </div>
+
+		        <div class="properties-specs">
+		            <p>Precio: <%= property.price %> UF</p>
+		            <p>Superficie Total<%= property.total_area %></p>
+		            <p>Dormitorios: <%= property.rooms %></p>
+		            <p>Baños: <%= property.toilets %></p>
+		        </div>
+
+		        <button><%= link_to "VER PROPIEDAD", property %></button>
+		        <%= link_to 'Edit', edit_property_path(property) %>
+		        <%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %>
+		    </div>
+		</div>
+		<% end %>
+	<% end %>
+
+</div>

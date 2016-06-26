@@ -12,6 +12,14 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :for_sale %><br>
+    <%= f.check_box :for_sale %>
+  </div>
+  <div class="field">
+    <%= f.label :for_rent %><br>
+    <%= f.check_box :for_rent %>
+  </div>
+  <div class="field">
     <%= f.label :address %><br>
     <%= f.text_field :address %>
   </div>
@@ -68,8 +76,8 @@
     <%= f.check_box :apartment %>
   </div>
   <div class="field">
-    <%= f.label :terreain %><br>
-    <%= f.check_box :terreain %>
+    <%= f.label :terrain %><br>
+    <%= f.check_box :terrain %>
   </div>
   <div class="field">
     <%= f.label :common_expenses %><br>

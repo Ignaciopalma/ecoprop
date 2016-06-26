@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160622175825) do
+ActiveRecord::Schema.define(version: 20160625171106) do
 
   create_table "contact_forms", force: :cascade do |t|
     t.string   "name"
@@ -38,12 +38,14 @@ ActiveRecord::Schema.define(version: 20160622175825) do
     t.boolean  "cellar"
     t.boolean  "house"
     t.boolean  "apartment"
-    t.boolean  "terreain"
+    t.boolean  "terrain"
     t.integer  "common_expenses"
     t.string   "district"
     t.string   "city"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.boolean  "for_rent"
+    t.boolean  "for_sale"
   end
 
 end

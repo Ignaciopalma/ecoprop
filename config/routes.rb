@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'rents/house'
+
+  get 'rents/apartment'
+
+  get 'rents/terrain'
+
+  get 'sales/house'
+
+  get 'sales/apartment'
+
+  get 'sales/terrain'
+
   resources :properties
   root "pages#index"
   
@@ -8,10 +20,14 @@ Rails.application.routes.draw do
 
   get 'pages/index'
 
+  get 'pages/panel' => 'pages#panel'
+
   get 'pages/about'
 
   get 'pages/contact'
+
   resources :contact_forms
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

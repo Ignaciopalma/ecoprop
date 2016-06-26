@@ -60,7 +60,7 @@
 
 			a {
 				text-decoration: none;
-				color: grey;
+				color: white;
 			}
 
 			button {
@@ -69,7 +69,7 @@
 				width: 25%;
 				margin-left: 75px;
     			margin-top: 20px;
-    			height: 35px;
+    			height: 42px;
     			background-color: $verde-claro;
     			border: 1px solid rgba(5, 93, 5, 1);
 			}
@@ -209,6 +209,17 @@
 }
 
 
+
+
+/****************** 
+
+1.0 PROPERTIES NEW
+
+********************/
+
+.new-property-form {
+	@include outer-container;
+}
 
 
 
