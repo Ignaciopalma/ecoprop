@@ -32,11 +32,19 @@ nav {
 		@include span-columns(2);
 
 		height: 100%;
+		padding-left: 16px;
+		padding-top: 7px;
 
 		img {
 			width: 100%;
 		}
 	}
+
+	/*** overiding @include span-columns width ***/
+	.logo {
+		width: 19%;
+	}
+
 
 	.nav-links {
 		@include span-columns(10);
@@ -46,6 +54,13 @@ nav {
     	padding-left: 541px;
    	    font-size: 13px;
    		font-weight: bold;
+   		width: 76.9%;
+   		padding-left: 450px;
+
+
+		// p {
+		// 	letter-spacing: 1.5px;
+		// }
 
 
     	.dropdown:nth-child(3) {
