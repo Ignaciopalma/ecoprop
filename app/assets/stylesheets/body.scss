@@ -117,7 +117,7 @@
 
 
 	.comunas {
-		@include outer-container;
+		@include outer-container();
 
 		margin-bottom: 50px;
 

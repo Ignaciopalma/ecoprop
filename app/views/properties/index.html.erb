@@ -21,6 +21,10 @@
                 <p>Baños: <%= property.toilets %></p>
             </div>
 
+            <% link_to property do %>
+                <button>VER PROPIEDAD</button>
+            <% end
+             %>
             <button><%= link_to "VER PROPIEDAD", property %></button>
             <%= link_to 'Edit', edit_property_path(property) %>
             <%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %>

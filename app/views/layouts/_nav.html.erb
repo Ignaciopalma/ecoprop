@@ -1,5 +1,9 @@
 <nav>
-	<div class="logo"><img src="https://s3-us-west-2.amazonaws.com/ecoprop/logo.png" alt="logo"></div>
+	<div class="logo">
+	<%= link_to root_path do %>
+		<img src="https://s3-us-west-2.amazonaws.com/ecoprop/logo.png" alt="logo">
+	<% end %>
+	</div>
 
 	<div class="nav-links">
 		<div class="dropdown">
@@ -10,6 +14,15 @@
 			<% end %>
 		</div>
 
+		<% if admin_signed_in? %>
+		<div class="dropdown">
+			<%= link_to pages_panel_path do %>
+			<div class="dropdown-container">
+				<p class="dropdown-button" style="background:blue;">MENSAJES</p>
+			</div>
+			<% end %>
+		</div>
+		<% else %>
 		<div class="dropdown">
 			<%= link_to pages_about_path do %>
 			<div class="dropdown-container">
@@ -17,6 +30,7 @@
 			</div>
 			<% end %>
 		</div>
+		<% end %>
 
 		<div class="dropdown">
 		  <div class="dropdown-container">
@@ -66,6 +80,16 @@
 		  </div>
 		</div>
 
+
+		<% if admin_signed_in? %>
+		<div class="dropdown">
+			<%= link_to destroy_admin_session_path, :method => :delete do %>
+			<div class="dropdown-container">
+				<p class="dropdown-button" style="background:red;">CERRAR SESION</p>
+			</div>
+			<% end %>
+		</div>
+		<% else %>
 		<div class="dropdown">
 			<%= link_to pages_contact_path do %>
 			<div class="dropdown-container">
@@ -73,6 +97,7 @@
 			</div>
 			<% end %>
 		</div>
+		<% end %>
 	</div>
 
 

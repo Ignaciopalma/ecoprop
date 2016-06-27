@@ -17,15 +17,20 @@
 		        </div>
 
 		        <div class="properties-specs">
-		            <p>Precio: <%= property.price %> UF</p>
-		            <p>Superficie Total<%= property.total_area %></p>
+		            <p>Precio: <%= number_with_delimiter(property.price/24000, delimiter: ".") %> UF</p>
+		            <p>Superficie Total: <%= property.total_area %></p>
 		            <p>Dormitorios: <%= property.rooms %></p>
 		            <p>Baños: <%= property.toilets %></p>
 		        </div>
 
-		        <button><%= link_to "VER PROPIEDAD", property %></button>
-		        <%= link_to 'Edit', edit_property_path(property) %>
-		        <%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %>
+			    <%= link_to property do %>
+			        <button>VER PROPIEDAD</button>
+			    <% end %>
+
+				<% if admin_signed_in? %>
+			        <%= link_to 'Edit', edit_property_path(property) %>
+			        <%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %>
+		        <% end %>
 		    </div>
 		</div>
 		<% end %>

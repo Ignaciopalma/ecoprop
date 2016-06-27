@@ -1,0 +1,22 @@
+.form-panel {
+	@include outer-container;
+
+	form {
+		padding: 0 15%;
+
+		input {
+			background-color: $verde-claro;
+			margin-bottom: 0;
+		}
+
+		::-webkit-input-placeholder {
+	   		color: white;
+	   		font-weight: bold;
+	   		font-size: 13px;
+		}
+
+		textarea {
+			background-color: $verde-claro;
+		}
+	}
+}

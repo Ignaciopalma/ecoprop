@@ -8,29 +8,10 @@
 		padding-bottom: 30px;
 	}
 
-	div.contact-form {
+	div.form-panel {
 		@include span-columns(7);
 
 		border-right: 2px solid $verde-claro;
-
-		form {
-			padding: 0 15%;
-
-			input {
-				background-color: $verde-claro;
-				margin-bottom: 0;
-			}
-
-			::-webkit-input-placeholder {
-		   		color: white;
-		   		font-weight: bold;
-		   		font-size: 13px;
-			}
-
-			textarea {
-				background-color: $verde-claro;
-			}
-		}
 	}
 
 	div.contact-info {

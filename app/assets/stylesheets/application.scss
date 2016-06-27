@@ -37,6 +37,8 @@ $negritas-font: 			'LaskiSlab-Bold', 'Georgia', 'Times', serif;
 @import "media-queries";
 @import "panel";
 @import "sales";
+@import "forms";
+@import "devise";
 
 
 
@@ -49,16 +51,16 @@ h1, h2, h3, h4, h5, h6, li, a, p, address, label {
 	// color: rgb(153, 504, 0);
 	color: white;
 	font-family: 'Pontano Sans', sans-serif;
-	// font-family: 'News Cylce', sans-serif;
-	// font-family: 'Oswald', sans-serif;
-	// font-family: 'Open Sans Condensed', sans-serif;
 	letter-spacing: 1px;
 }
 
 h2, h3, h4 {
 	font-family: 'Oswald', sans-serif;
 	letter-spacing: 2px;
-	
+}
+
+p.notice, p.alert {
+	margin: 0;
 }
 
 

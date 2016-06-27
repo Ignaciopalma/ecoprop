@@ -7,7 +7,7 @@
 
         <h3><%= @property.description %></h3>
 
-        <h4>$ <%= @property.price %></h4>
+        <h4>$ <%= number_with_delimiter(@property.price, delimiter: ".") %></h4>
     </div>
     
     <div class="property-container">
@@ -34,10 +34,10 @@
             <div class="price">
                 <div>
                     <h2>VALOR</h2>
-                    <p><%= @property.price/24000 %> UF</p>
+                    <p><%= number_with_delimiter(@property.price/24000, delimiter: ".") %> UF</p>
                 </div>
                 <div>
-                    <p>$ <%= @property.price %></p>
+                    <p>$ <%= number_with_delimiter(@property.price, delimiter: ".") %></p>
                 </div>
             </div>
         </div>
@@ -53,9 +53,15 @@
             </div>
 
             <div class="contact-buttons">
-                <button><%= link_to "SOLICITAR VISITA", "#" %></button>
-                <button><%= link_to "SOLICITAR INFO", "#" %></button>
-                <button><%= link_to "CONTACTO", "#" %></button>
+                <%= link_to pages_contact_path do %>
+                    <button>SOLICITAR VISITA</button>
+                <% end %>
+                <%= link_to pages_contact_path do %>
+                    <button>SOLICITAR INFO</button>
+                <% end %>
+                <%= link_to pages_contact_path do %>
+                    <button>CONTACTO</button>
+                <% end %>
             </div>
         </div>
     </div>
