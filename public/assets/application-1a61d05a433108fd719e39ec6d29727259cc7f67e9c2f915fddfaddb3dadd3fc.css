@@ -1,0 +1,1573 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+/* line 4, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_box-sizing.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 9, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_box-sizing.scss */
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/* http://ilikekillnerds.com/2010/12/a-solution-to-stop-font-face-fonts-looking-bold-on-mac-browsers/ */
+/* line 3, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/fonts.scss */
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'BlocC';
+  src: url("/assets/blockbe-condensed.woff2") format("woff2"), url("/assets/blockbe-condensed.woff") format("woff");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LaskiSlab-Regular';
+  src: url("/assets/LaskiSlab-Regular.woff2") format("woff2"), url("/assets/LaskiSlab-Regular.woff") format("woff");
+  /* Modern Browsers */
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LaskiSlab-ExtraLight';
+  src: url("/assets/LaskiSlab-ExtraLight.woff2") format("woff2"), url("/assets/LaskiSlab-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LaskiSlab-Bold';
+  src: url("/assets/LaskiSlab-Bold.woff2") format("woff2"), url("/assets/LaskiSlab-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+/* line 1, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_buttons.scss */
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  appearance: none;
+  background-color: #1565c0;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+/* line 21, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_buttons.scss */
+button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+  background-color: #11519a;
+  color: #fff;
+}
+/* line 27, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_buttons.scss */
+button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+/* line 31, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_buttons.scss */
+button:disabled:hover, input[type="button"]:disabled:hover, input[type="reset"]:disabled:hover, input[type="submit"]:disabled:hover {
+  background-color: #1565c0;
+}
+
+/* line 1, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_forms.scss */
+fieldset {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_forms.scss */
+legend {
+  font-weight: 600;
+  margin-bottom: 0.375em;
+  padding: 0;
+}
+
+/* line 14, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_forms.scss */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.375em;
+}
+
+/* line 20, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_forms.scss */
+input,
+select {
+  display: block;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+}
+
+/* line 28, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_forms.scss */
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
+select[multiple] {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em;
+  transition: border-color 150ms ease;
+  width: 100%;
+}
+/* line 42, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_forms.scss */
+input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover,
+select[multiple]:hover {
+  border-color: #b1b1b1;
+}
+/* line 46, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_forms.scss */
+input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
+select[multiple]:focus {
+  border-color: #1565c0;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(18, 89, 169, 0.7);
+  outline: none;
+}
+/* line 52, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_forms.scss */
+input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="email"]:disabled, input[type="month"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="text"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, input[type="week"]:disabled, input:not([type]):disabled, textarea:disabled,
+select[multiple]:disabled {
+  background-color: #f2f2f2;
+  cursor: not-allowed;
+}
+/* line 56, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_forms.scss */
+input[type="color"]:disabled:hover, input[type="date"]:disabled:hover, input[type="datetime"]:disabled:hover, input[type="datetime-local"]:disabled:hover, input[type="email"]:disabled:hover, input[type="month"]:disabled:hover, input[type="number"]:disabled:hover, input[type="password"]:disabled:hover, input[type="search"]:disabled:hover, input[type="tel"]:disabled:hover, input[type="text"]:disabled:hover, input[type="time"]:disabled:hover, input[type="url"]:disabled:hover, input[type="week"]:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover,
+select[multiple]:disabled:hover {
+  border: 1px solid #ddd;
+}
+
+/* line 62, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_forms.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 66, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_forms.scss */
+[type="search"] {
+  appearance: none;
+}
+
+/* line 70, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_forms.scss */
+[type="checkbox"],
+[type="radio"] {
+  display: inline;
+  margin-right: 0.375em;
+}
+
+/* line 76, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_forms.scss */
+[type="file"] {
+  margin-bottom: 0.75em;
+  width: 100%;
+}
+
+/* line 81, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_forms.scss */
+select {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  width: auto;
+}
+
+/* line 1, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_lists.scss */
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_lists.scss */
+dl {
+  margin-bottom: 0.75em;
+}
+/* line 11, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_lists.scss */
+dl dt {
+  font-weight: 600;
+  margin-top: 0.75em;
+}
+/* line 16, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_lists.scss */
+dl dd {
+  margin: 0;
+}
+
+/* line 1, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_tables.scss */
+table {
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* line 8, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_tables.scss */
+th {
+  border-bottom: 1px solid #a6a6a6;
+  font-weight: 600;
+  padding: 0.75em 0;
+  text-align: left;
+}
+
+/* line 15, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_tables.scss */
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.75em 0;
+}
+
+/* line 20, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_tables.scss */
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+/* line 1, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_typography.scss */
+body {
+  color: #333;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* line 8, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_typography.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  line-height: 1.2;
+  margin: 0 0 0.75em;
+}
+
+/* line 20, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_typography.scss */
+p {
+  margin: 0 0 0.75em;
+}
+
+/* line 24, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_typography.scss */
+a {
+  color: #1565c0;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+/* line 29, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_typography.scss */
+a:active, a:focus, a:hover {
+  color: #104c90;
+}
+
+/* line 36, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_typography.scss */
+hr {
+  border-bottom: 1px solid #ddd;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: 1.5em 0;
+}
+
+/* line 44, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/base/_typography.scss */
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+/* ***************** ***************** ***************** */
+/* 00. VARIABLES */
+/* ***************** ***************** ***************** */
+/* line 5, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/pages.scss */
+h1 {
+  text-align: center;
+}
+
+/********************************* 
+
+ VARIABLES DE REFILL DROPDOWN MENU 
+
+**********************************/
+/* line 25, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 3px solid #669e23;
+  height: 85px;
+  /*** overiding @include span-columns width ***/
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+nav::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 31, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .logo {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+  height: 100%;
+  padding-left: 16px;
+  padding-top: 7px;
+  margin-right: 0;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+nav .logo:last-child {
+  margin-right: 0;
+}
+/* line 39, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .logo img {
+  width: 100%;
+}
+/* line 45, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .logo {
+  width: 19%;
+}
+/* line 50, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .nav-links {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  margin-right: 0;
+  padding-top: 26px;
+  padding-left: 541px;
+  font-size: 13px;
+  font-weight: bold;
+  width: 76.9%;
+  padding-left: 411px;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+nav .nav-links:last-child {
+  margin-right: 0;
+}
+/* line 69, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .nav-links .dropdown:nth-child(3) .dropdown-container .dropdown-button::after {
+  color: #669e23;
+  content: "\25BE";
+  display: block;
+  position: absolute;
+  right: 1em;
+  top: 0;
+}
+/* line 82, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .nav-links .dropdown:nth-child(4) .dropdown-container .dropdown-button::after {
+  color: #669e23;
+  content: "\25BE";
+  display: block;
+  position: absolute;
+  right: 1em;
+  top: 0;
+}
+/* line 95, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .nav-links .dropdown:last-child .dropdown-container .dropdown-button {
+  border-right: 1px solid #003333;
+}
+/* line 102, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .nav-links#admin-nav {
+  padding-left: 250px;
+}
+/* line 107, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .nav-links#admin-nav .dropdown:nth-child(2) .dropdown-container .dropdown-button::after {
+  color: #669e23;
+  content: "\25BE";
+  display: block;
+  position: absolute;
+  right: 1em;
+  top: 0;
+}
+/* line 120, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .nav-links#admin-nav .dropdown:nth-child(3) .dropdown-container .dropdown-button::after {
+  color: #669e23;
+  content: "\25BE";
+  display: block;
+  position: absolute;
+  right: 1em;
+  top: 0;
+}
+/* line 133, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+nav .nav-links#admin-nav .dropdown:nth-child(4) .dropdown-container .dropdown-button::after {
+  color: #669e23;
+  content: none;
+  display: block;
+  position: absolute;
+  right: 1em;
+  top: 0;
+}
+
+/* line 146, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+.slicknav_menu {
+  background-color: #003333;
+  heigth: 200px;
+}
+/* line 150, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+.slicknav_menu a {
+  background-color: #003333;
+}
+
+/****************** 
+
+ DROP-DOWN MENU 
+
+********************/
+/* line 162, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+.dropdown {
+  line-height: 1.5;
+  display: inline;
+}
+/* line 166, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+.dropdown .dropdown-container {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+/* line 173, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+.dropdown .dropdown-container .dropdown-menu a li {
+  border-bottom: 1px solid silver;
+  color: white;
+  list-style: none;
+  padding: 0.5em;
+}
+/* line 183, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+.dropdown .dropdown-button {
+  background: #003333;
+  border-bottom: 1px solid #003333;
+  border-bottom-right-radius: 3px;
+  border-right: 1px solid #669e23;
+  border-top: 1px solid #003333;
+  border-top-right-radius: 3px;
+  cursor: pointer;
+  float: right;
+  font-size: 0.7em;
+  line-height: 25px;
+  margin: 0;
+  padding: 0 2.5em 0 0.5em;
+  position: relative;
+}
+/* line 198, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+.dropdown .dropdown-button .dropdown-button:last-child {
+  border-right: 1px solid #003333;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 183, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+  .dropdown .dropdown-button {
+    font-size: 1em;
+    padding: 0 2.5em 0 0.5em;
+  }
+}
+/* line 208, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+.dropdown .dropdown-button:hover {
+  background-color: #5e9120;
+}
+/* line 212, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+.dropdown .dropdown-menu {
+  background: #669e23;
+  border: 1px solid #003333;
+  border-radius: 3px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  color: white;
+  cursor: pointer;
+  display: none;
+  margin: 0;
+  overflow: show;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 41px;
+  transition: all 0.2s ease-in-out;
+  width: 228px;
+  z-index: 99999;
+  left: -54px;
+}
+/* line 231, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+.dropdown .dropdown-menu::before {
+  position: absolute;
+  top: 0;
+  right: 1em;
+  bottom: 0;
+  left: 0;
+  color: #669e23;
+  content: "\25b2";
+  font-size: 1.4em;
+  pointer-events: none;
+  text-shadow: 0 -2px 2px rgba(0, 0, 0, 0.3);
+  top: -0.7em;
+}
+/* line 242, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+.dropdown .dropdown-menu li {
+  border-bottom: 1px solid silver;
+  color: white;
+  list-style: none;
+  padding: 0.5em;
+}
+/* line 249, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+.dropdown .dropdown-menu li:hover {
+  background: #5e9120;
+}
+/* line 253, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+.dropdown .dropdown-menu li:first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+/* line 258, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+.dropdown .dropdown-menu li:last-child {
+  border: 0;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+/* line 264, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/nav.scss */
+.dropdown .show-menu {
+  display: block;
+}
+
+/* line 2, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container h2 {
+  text-align: center;
+  margin-top: 65px;
+  margin-bottom: 3r5px;
+  font-size: 25px;
+}
+/* line 10, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .main {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.body-container .main::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 13, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .main .main-slider {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.body-container .main .main-slider::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 17, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .main .main-slider div {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  height: 570px;
+  background-size: cover;
+  margin-right: 0;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.body-container .main .main-slider div:last-child {
+  margin-right: 0;
+}
+/* line 24, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .main .main-slider div h2 {
+  font-size: 5em;
+  margin-top: 190px;
+}
+/* line 30, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .main .main-slider .slick-dots li button:before {
+  font-size: 16px;
+}
+/* line 34, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .main .main-slider .slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: #669e23;
+}
+/* line 39, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .main .main-slider .slick-dots li button:before {
+  color: white;
+}
+/* line 44, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .main .contactar {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
+  background-color: rgba(241, 220, 144, 0.49);
+  margin-top: -230px;
+  position: relative;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.body-container .main .contactar::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 52, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .main .contactar h3 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  font-size: 23px;
+  position: absolute;
+  padding-top: 60px;
+  padding-left: 50px;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.body-container .main .contactar h3:last-child {
+  margin-right: 0;
+}
+/* line 60, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .main .contactar a {
+  text-decoration: none;
+}
+/* line 63, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .main .contactar a button.link {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  background-color: #f1dc90;
+  text-decoration: none;
+  position: absolute;
+  margin-left: 1020px;
+  margin-top: 45px;
+  width: 189px;
+  padding: 20px;
+  color: #003333;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.body-container .main .contactar a button.link:last-child {
+  margin-right: 0;
+}
+/* line 83, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .propiedades-destacadas {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.body-container .propiedades-destacadas::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 87, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .propiedades-destacadas img {
+  width: 396px;
+  height: 453px;
+  padding: 15px 35px 15px;
+}
+/* line 93, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .propiedades-destacadas h2 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+/* line 98, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .propiedades-destacadas h3, .body-container .propiedades-destacadas p {
+  padding-left: 35px;
+  margin: 0;
+}
+/* line 103, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .propiedades-destacadas .slick-prev {
+  left: 0;
+}
+/* line 107, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .propiedades-destacadas .slick-next {
+  right: 0;
+}
+/* line 111, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .propiedades-destacadas .slick-prev:before, .body-container .propiedades-destacadas .slick-next:before {
+  color: #669e23;
+  font-size: 30px;
+}
+/* line 119, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .comunas {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.body-container .comunas::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 124, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .comunas img {
+  width: 396px;
+  height: 453px;
+  padding: 15px 35px 10px;
+}
+/* line 130, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .comunas .slick-prev {
+  left: 0;
+}
+/* line 134, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .comunas .slick-next {
+  right: 0;
+}
+/* line 138, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/body.scss */
+.body-container .comunas .slick-prev:before, .body-container .comunas .slick-next:before {
+  color: #669e23;
+  font-size: 30px;
+}
+
+/* line 1, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 3px solid #669e23;
+  padding: 18px 14px;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+footer::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 7, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer a:hover {
+  color: #669e23;
+}
+/* line 11, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer div {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 16.40792%;
+  padding-top: 10px;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+footer div:last-child {
+  margin-right: 0;
+}
+/* line 15, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer div ul {
+  padding-left: 0;
+  padding-bottom: 15px;
+}
+/* line 19, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer div ul li, footer div ul a {
+  text-decoration: none;
+  list-style-type: none;
+}
+/* line 26, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer div:nth-child(4) {
+  padding-top: 41px;
+  width: 269px;
+}
+/* line 31, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer div.e {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+footer div.e::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 34, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer div.e div {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  text-align: center;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+footer div.e div:last-child {
+  margin-right: 0;
+}
+/* line 39, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer div.e div.icons {
+  padding-left: 27%;
+  padding-top: 0;
+}
+/* line 42, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer div.e div.icons img {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  width: 35px;
+  height: 35px;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+footer div.e div.icons img:last-child {
+  margin-right: 0;
+}
+/* line 49, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/footer.scss */
+footer div.e div.icons img:nth-child(1) {
+  margin-right: 28px;
+}
+
+/****************** 
+
+1.0 PROPERTIES INDEX 
+
+********************/
+/* line 11, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.properties-index {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.properties-index::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 14, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.properties-index h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+/* line 20, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.properties-index div.list-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 3px solid #669e23;
+  padding-bottom: 35px;
+  padding-top: 35px;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.properties-index div.list-container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 27, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.properties-index div.list-container img {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  border: 3px solid #669e23;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.properties-index div.list-container img:last-child {
+  margin-right: 0;
+}
+/* line 33, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.properties-index div.list-container div {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  margin-right: 0;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.properties-index div.list-container div:last-child {
+  margin-right: 0;
+}
+/* line 37, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.properties-index div.list-container div .properties-title {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.properties-index div.list-container div .properties-title:last-child {
+  margin-right: 0;
+}
+/* line 40, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.properties-index div.list-container div .properties-title h2 {
+  margin: 0;
+}
+/* line 44, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.properties-index div.list-container div .properties-title h3 {
+  margin-top: 0;
+}
+/* line 49, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.properties-index div.list-container div .properties-specs {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.properties-index div.list-container div .properties-specs:last-child {
+  margin-right: 0;
+}
+/* line 52, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.properties-index div.list-container div .properties-specs p:nth-child(1) {
+  margin-bottom: 0;
+}
+/* line 56, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.properties-index div.list-container div .properties-specs p {
+  margin: 0;
+}
+/* line 61, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.properties-index div.list-container div a {
+  text-decoration: none;
+  color: white;
+}
+/* line 66, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.properties-index div.list-container div button {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  width: 25%;
+  margin-left: 75px;
+  margin-top: 20px;
+  height: 42px;
+  background-color: #669e23;
+  border: 1px solid #055d05;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.properties-index div.list-container div button:last-child {
+  margin-right: 0;
+}
+/* line 79, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.properties-index div.list-container:last-child {
+  border-bottom: none;
+}
+
+/****************** 
+
+1.0 PROPERTIES SHOW
+
+********************/
+/* line 91, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.property-show::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 94, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.property-show div::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 97, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div h2 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-bottom: 0;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.property-show div h2:last-child {
+  margin-right: 0;
+}
+/* line 103, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div h3 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  margin-bottom: 0;
+  padding-top: 5px;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.property-show div h3:last-child {
+  margin-right: 0;
+}
+/* line 110, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div h4 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  background-color: #669e23;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.property-show div h4:last-child {
+  margin-right: 0;
+}
+/* line 123, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div.property-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #669e23;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.property-show div.property-container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 128, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div.property-container .property-specs {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.property-show div.property-container .property-specs:last-child {
+  margin-right: 0;
+}
+/* line 132, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div.property-container .property-specs .details div {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #669e23;
+  margin-left: 10px;
+  margin-right: 0px;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.property-show div.property-container .property-specs .details div::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 139, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div.property-container .property-specs .details div h5 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-bottom: 0;
+  padding-top: 21px;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.property-show div.property-container .property-specs .details div h5:last-child {
+  margin-right: 0;
+}
+/* line 146, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div.property-container .property-specs .details div p {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-right: 0;
+  text-align: right;
+  margin-bottom: 0;
+  padding-top: 16px;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.property-show div.property-container .property-specs .details div p:last-child {
+  margin-right: 0;
+}
+/* line 157, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div.property-container .property-specs .price {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 291px;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.property-show div.property-container .property-specs .price::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 162, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div.property-container .property-specs .price div:first-child {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #669e23;
+  margin-left: 10px;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.property-show div.property-container .property-specs .price div:first-child::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 168, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div.property-container .property-specs .price div:first-child h2 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  padding-top: 5px;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.property-show div.property-container .property-specs .price div:first-child h2:last-child {
+  margin-right: 0;
+}
+/* line 174, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div.property-container .property-specs .price div:first-child p {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-right: 0;
+  margin-bottom: 4px;
+  padding-top: 4px;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.property-show div.property-container .property-specs .price div:first-child p:last-child {
+  margin-right: 0;
+}
+/* line 184, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div.property-container .property-specs .price div:last-child p {
+  padding-top: 5px;
+}
+/* line 191, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div.property-container .property-image {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-right: 0;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.property-show div.property-container .property-image:last-child {
+  margin-right: 0;
+}
+/* line 195, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div.property-container .property-image img {
+  width: 100%;
+}
+/* line 200, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div.property-container .property-footer {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.property-show div.property-container .property-footer::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.property-show div.property-container .property-footer:last-child {
+  margin-right: 0;
+}
+/* line 207, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div.property-container .property-footer .description {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  padding-left: 10px;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.property-show div.property-container .property-footer .description:last-child {
+  margin-right: 0;
+}
+/* line 212, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div.property-container .property-footer .description h3 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.property-show div.property-container .property-footer .description h3:last-child {
+  margin-right: 0;
+}
+/* line 216, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div.property-container .property-footer .description p {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  text-align: left;
+  padding-top: 30px;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.property-show div.property-container .property-footer .description p:last-child {
+  margin-right: 0;
+}
+/* line 224, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div.property-container .property-footer .contact-buttons {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  margin-right: 0;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.property-show div.property-container .property-footer .contact-buttons:last-child {
+  margin-right: 0;
+}
+/* line 228, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show div.property-container .property-footer .contact-buttons button {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-right: 0;
+  width: 94%;
+  margin: 10px;
+  background-color: #669e23;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.property-show div.property-container .property-footer .contact-buttons button:last-child {
+  margin-right: 0;
+}
+/* line 240, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show p, .property-show a {
+  text-align: right;
+  text-decoration: none;
+}
+/* line 244, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.property-show p a:hover, .property-show a a:hover {
+  color: #669e23;
+}
+
+/****************** 
+
+1.0 PROPERTIES NEW
+
+********************/
+/* line 259, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.new-property-form {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.new-property-form::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 262, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.new-property-form h1 {
+  margin-top: 26px;
+}
+/* line 268, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.new-property-form .form-panel h2, .new-property-form .form-panel label {
+  text-align: center;
+}
+/* line 272, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.new-property-form .form-panel input[type="checkbox"] {
+  margin-left: 47%;
+}
+/* line 276, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.new-property-form .form-panel .property-type {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 35px 0;
+  border: 1px solid #669e23;
+  padding: 10px;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.new-property-form .form-panel .property-type::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 283, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.new-property-form .form-panel .property-type div.field {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.new-property-form .form-panel .property-type div.field:last-child {
+  margin-right: 0;
+}
+/* line 288, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.new-property-form .form-panel .property-state {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 35px 0;
+  border: 1px solid #669e23;
+  padding: 10px;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.new-property-form .form-panel .property-state::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 295, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.new-property-form .form-panel .property-state div.field {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.new-property-form .form-panel .property-state div.field:last-child {
+  margin-right: 0;
+}
+/* line 301, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.new-property-form .form-panel .property-details .field {
+  margin: 20px 0;
+}
+/* line 306, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.new-property-form .form-panel .property-extras {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #669e23;
+  padding: 10px;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.new-property-form .form-panel .property-extras::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 312, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.new-property-form .form-panel .property-extras .field {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.new-property-form .form-panel .property-extras .field:last-child {
+  margin-right: 0;
+}
+/* line 317, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.new-property-form .form-panel .property-image {
+  margin: 40px 0;
+}
+/* line 321, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.new-property-form .form-panel .property-image .field {
+  margin: 20px 0 20px 44%;
+}
+/* line 326, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.new-property-form .form-panel div.actions {
+  margin-left: 40%;
+}
+/* line 331, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/properties.scss */
+.new-property-form .form-panel form input#property_image {
+  background: transparent;
+}
+
+/* line 1, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/contact.scss */
+.contact-page {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 80px;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.contact-page::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 5, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/contact.scss */
+.contact-page h1 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/* line 11, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/contact.scss */
+.contact-page div.form-panel {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 57.35098%;
+  border-right: 2px solid #669e23;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.contact-page div.form-panel:last-child {
+  margin-right: 0;
+}
+/* line 17, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/contact.scss */
+.contact-page div.contact-info {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 40.29137%;
+  margin-right: 0;
+  height: 440px;
+  padding: 7%;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.contact-page div.contact-info:last-child {
+  margin-right: 0;
+}
+/* line 24, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/contact.scss */
+.contact-page div.contact-info img {
+  margin-bottom: 33px;
+}
+/* line 28, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/contact.scss */
+.contact-page div.contact-info p {
+  margin-bottom: 0;
+}
+
+/* ***************** */
+/* DESKTOP */
+/* ***************** */
+@media (min-width: 320px) and (max-width: 568px) {
+  /* line 5, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/media-queries.scss */
+  nav {
+    display: none;
+  }
+}
+@media (min-width: 568px) {
+  /* line 11, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/media-queries.scss */
+  .slicknav_menu {
+    display: none;
+  }
+}
+/* line 1, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/panel.scss */
+.admin-panel {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.admin-panel::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 4, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/panel.scss */
+.admin-panel h2 {
+  text-align: center;
+}
+/* line 8, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/panel.scss */
+.admin-panel div.list-container {
+  border-bottom: 3px solid #669e23;
+  padding-bottom: 35px;
+  padding-top: 35px;
+}
+/* line 15, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/panel.scss */
+.admin-panel div.list-container:last-child {
+  border-bottom: none;
+}
+
+/* line 1, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/forms.scss */
+.form-panel {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.3/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.form-panel::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 4, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/forms.scss */
+.form-panel form {
+  padding: 0 15%;
+}
+/* line 7, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/forms.scss */
+.form-panel form input {
+  background-color: #669e23;
+  margin-bottom: 0;
+}
+/* line 12, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/forms.scss */
+.form-panel form ::-webkit-input-placeholder {
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+}
+/* line 18, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/forms.scss */
+.form-panel form textarea {
+  background-color: #669e23;
+}
+
+/* line 2, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/devise.scss */
+.admin-sign-in h2 {
+  text-align: center;
+  margin-top: 80px;
+}
+/* line 7, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/devise.scss */
+.admin-sign-in .form-panel {
+  margin: 60px 30% 110px 30%;
+}
+/* line 10, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/devise.scss */
+.admin-sign-in .form-panel form {
+  margin-bottom: 15px;
+}
+/* line 13, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/devise.scss */
+.admin-sign-in .form-panel form input#admin_email {
+  margin: 40px 0;
+}
+/* line 17, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/devise.scss */
+.admin-sign-in .form-panel form input#admin_password {
+  margin-bottom: 15px;
+}
+/* line 21, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/devise.scss */
+.admin-sign-in .form-panel form input#admin_remember_me {
+  margin: 0;
+}
+/* line 25, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/devise.scss */
+.admin-sign-in .form-panel form input[type="submit"] {
+  margin: 0;
+}
+/* line 30, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/devise.scss */
+.admin-sign-in .form-panel a {
+  margin: 0 15%;
+}
+
+/* line 46, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/application.scss */
+body {
+  background-color: #003333;
+}
+
+/* line 51, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/application.scss */
+h1, h2, h3, h4, h5, h6, li, a, p, address, label {
+  color: white;
+  font-family: 'Pontano Sans', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* line 58, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/application.scss */
+h2, h3, h4 {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+}
+
+/* line 63, /Users/ignaciopalma/Desktop/my-rails-projects/ecoprop/app/assets/stylesheets/application.scss */
+p.notice, p.alert {
+  margin: 0;
+}

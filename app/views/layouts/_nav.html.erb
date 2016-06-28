@@ -5,7 +5,8 @@
 	<% end %>
 	</div>
 
-	<div class="nav-links">
+	<% if admin_signed_in? %>
+	<div class="nav-links" id="admin-nav">
 		<div class="dropdown">
 			<%= link_to root_path do %>
 			<div class="dropdown-container">
@@ -13,24 +14,6 @@
 			</div>
 			<% end %>
 		</div>
-
-		<% if admin_signed_in? %>
-		<div class="dropdown">
-			<%= link_to pages_panel_path do %>
-			<div class="dropdown-container">
-				<p class="dropdown-button" style="background:blue;">MENSAJES</p>
-			</div>
-			<% end %>
-		</div>
-		<% else %>
-		<div class="dropdown">
-			<%= link_to pages_about_path do %>
-			<div class="dropdown-container">
-				<p class="dropdown-button">QUIENES SOMOS</p>
-			</div>
-			<% end %>
-		</div>
-		<% end %>
 
 		<div class="dropdown">
 		  <div class="dropdown-container">
@@ -80,8 +63,22 @@
 		  </div>
 		</div>
 
+		<div class="dropdown">
+			<%= link_to pages_panel_path do %>
+			<div class="dropdown-container">
+				<p class="dropdown-button" style="background:blue;">MENSAJES</p>
+			</div>
+			<% end %>
+		</div>
 
-		<% if admin_signed_in? %>
+		<div class="dropdown">
+			<%= link_to new_property_path do %>
+			<div class="dropdown-container">
+				<p class="dropdown-button" style="background:green;">CREAR PROPIEDAD</p>
+			</div>
+			<% end %>
+		</div>
+
 		<div class="dropdown">
 			<%= link_to destroy_admin_session_path, :method => :delete do %>
 			<div class="dropdown-container">
@@ -89,7 +86,75 @@
 			</div>
 			<% end %>
 		</div>
-		<% else %>
+	</div>
+
+	<% else %>
+
+	<div class="nav-links">
+		<div class="dropdown">
+			<%= link_to root_path do %>
+			<div class="dropdown-container">
+				<p class="dropdown-button">INICIO</p>
+			</div>
+			<% end %>
+		</div>
+
+		<div class="dropdown">
+			<%= link_to pages_about_path do %>
+			<div class="dropdown-container">
+				<p class="dropdown-button">QUIENES SOMOS</p>
+			</div>
+			<% end %>
+		</div>
+
+		<div class="dropdown">
+		  <div class="dropdown-container">
+		    <p class="dropdown-button">EN VENTA</p>
+		    <ul class="dropdown-menu dropdown-select">
+
+				<%= link_to properties_path do %>
+					<li>Todos</li>
+				<% end %>
+
+				<%= link_to sales_house_path do %>
+					<li>Casas</li>
+				<% end %>
+
+				<%= link_to sales_apartment_path do %>
+					<li>Departamentos</li>
+				<% end %>
+
+				<%= link_to sales_terrain_path do %>
+					<li>Terreno</li>
+				<% end %>
+		    </ul>
+		  </div>
+		</div>
+
+		<div class="dropdown">
+		  <div class="dropdown-container">
+		    <p class="dropdown-button">EN ARRIENDO</p>
+		    <ul class="dropdown-menu dropdown-select">
+
+				<%= link_to properties_path do %>
+					<li>Todos</li>
+				<% end %>
+
+				<%= link_to rents_house_path do %>
+					<li>Casas</li>
+				<% end %>
+
+				<%= link_to rents_apartment_path do %>
+					<li>Departamentos</li>
+				<% end %>
+
+				<%= link_to rents_terrain_path do %>
+					<li>Terreno</li>
+				<% end %>
+		    </ul>
+		  </div>
+		</div>
+
 		<div class="dropdown">
 			<%= link_to pages_contact_path do %>
 			<div class="dropdown-container">
@@ -97,8 +162,8 @@
 			</div>
 			<% end %>
 		</div>
-		<% end %>
 	</div>
+	<% end %>
 
 
 </nav>

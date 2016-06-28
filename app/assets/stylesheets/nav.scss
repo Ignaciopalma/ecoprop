@@ -98,6 +98,49 @@ nav {
 			}
 		}
 	}
+
+	.nav-links#admin-nav {
+		padding-left: 250px;
+
+		.dropdown:nth-child(2) {
+			.dropdown-container {
+				.dropdown-button::after {
+					color: $verde-claro;
+					content: "\25BE";
+					display: block;
+					position: absolute;
+					right: $dropdown-padding;
+					top: $dropdown-arrow-top-distance;
+				}
+			}
+		}
+
+    	.dropdown:nth-child(3) {
+			.dropdown-container {
+				.dropdown-button::after {
+					color: $verde-claro;
+					content: "\25BE";
+					display: block;
+					position: absolute;
+					right: $dropdown-padding;
+					top: $dropdown-arrow-top-distance;
+				}
+			}
+		}
+
+    	.dropdown:nth-child(4) {
+			.dropdown-container {
+				.dropdown-button::after {
+					color: $verde-claro;
+					content: none;
+					display: block;
+					position: absolute;
+					right: $dropdown-padding;
+					top: $dropdown-arrow-top-distance;
+				}
+			}
+		}
+	}
 }
 
 .slicknav_menu {

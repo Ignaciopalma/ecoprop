@@ -12,6 +12,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'bitters'
 gem 'devise'
+gem 'carrierwave'
 
 group :development, :test do
 	gem 'byebug'

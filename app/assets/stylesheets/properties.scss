@@ -258,6 +258,81 @@
 
 .new-property-form {
 	@include outer-container;
+
+	h1 {
+		margin-top: 26px;
+	}
+
+	.form-panel {
+
+		h2, label {
+			text-align: center;
+		}
+
+		input[type="checkbox"] {
+			margin-left: 47%;
+		}
+
+		.property-type {
+			@include outer-container;
+
+			margin: 35px 0;
+			border: 1px solid $verde-claro;
+			padding: 10px;
+			
+			div.field {
+				@include span-columns(4);
+			}
+		}
+
+		.property-state {
+			@include outer-container;
+
+			margin: 35px 0;
+			border: 1px solid $verde-claro;
+			padding: 10px;
+
+			div.field {
+				@include span-columns(6);
+			}
+		}
+
+		.property-details {
+			.field {
+				margin: 20px 0;
+			}
+		}
+
+		.property-extras {
+			@include outer-container;
+
+			border: 1px solid $verde-claro;
+			padding: 10px;
+
+			.field {
+				@include span-columns(4);
+			}
+		}
+
+		.property-image {
+
+			margin: 40px 0;
+
+			.field {
+				margin: 20px 0 20px 44%;
+			}
+		}
+
+		div.actions {
+			margin-left: 40%;
+		}
+
+		form {
+			input#property_image {
+				background: transparent;
+			}
+		}
+	}
 }
 
 
