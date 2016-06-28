@@ -17,7 +17,7 @@
 		        </div>
 
 		        <div class="properties-specs">
-		            <p>Precio: <%= number_with_delimiter(@property.price/24000, delimiter: ".") %> UF</p>
+		            <p>Precio: <%= number_with_delimiter(property.price/24000, delimiter: ".") %> UF</p>
 		            <p>Superficie Total: <%= property.total_area %></p>
 		            <p>Dormitorios: <%= property.rooms %></p>
 		            <p>Baños: <%= property.toilets %></p>
