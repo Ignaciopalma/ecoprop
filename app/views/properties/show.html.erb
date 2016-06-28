@@ -2,15 +2,22 @@
 <p id="notice"><%= notice %></p>
 
 <div class="property-show">
-    <div>
+    <div class="property-header">
         <h2><%= @property.address %></h2>
 
-        <h3><%= @property.description %></h3>
+        <h3>
+            <% if @property.for_sale == true %>
+                EN VENTA
+            <% else %>
+                EN ARRIENDO
+            <% end %>
+        </h3>
 
         <h4>$ <%= number_with_delimiter(@property.price, delimiter: ".") %></h4>
     </div>
     
     <div class="property-container">
+
         <div class="property-specs">
             <div class="details">
                 <div>   
@@ -19,7 +26,11 @@
                 </div>
                 <div>
                     <h5>Superficie Total</h5>
-                    <p><%= @property.total_area %></p>
+                    <p><%= @property.total_area %> m2</p>
+                </div>
+                <div>
+                    <h5>Superficie Construida</h5>
+                    <p><%= @property.house_area %> m2</p>
                 </div>
                 <div>
                     <h5>Nº de Dormitorios:</h5>
@@ -28,6 +39,44 @@
                 <div>
                     <h5>Nº de Baños:</h5>
                     <p><%= @property.toilets %></p>
+                </div>
+                <div>
+                    <h5>Piscina:</h5>
+                    <p>
+                        <% if @property.pool == true %>
+                            SI
+                        <% else %>
+                            NO
+                        <% end %>
+                    </p>
+                </div>
+                <div>
+                    <h5>Bodega:</h5>
+                    <p>
+                        <% if @property.cellar == true %>
+                            SI
+                        <% else %>
+                            NO
+                        <% end %>
+                    </p>
+                </div>
+                <div>
+                    <h5>Estacionamientos:</h5>
+                    <p><%= @property.parking %></p>
+                </div>
+                <div>
+                    <h5>Gastos Comunes:</h5>
+                    <p><%= @property.common_expenses %> (aprox)</p>
+                </div>
+                <div>
+                    <h5>Amoblado:</h5>
+                    <p>
+                        <% if @property.furnished == true %>
+                            SI
+                        <% else %>
+                            NO
+                        <% end %>
+                    </p>
                 </div>
             </div>
 
@@ -43,8 +92,26 @@
         </div>
 
         <div class="property-image">
-            <%= image_tag @property.image_url %>
+            <div class="property-images-slider">
+                <div>
+                    <%= image_tag @property.image_url %>
+                </div>
+                <div>
+                    <%= image_tag @property.imagetwo_url %>
+                </div>
+                <div>
+                    <%= image_tag @property.imagethree_url %>
+                </div>
+                <div>
+                    <%= image_tag @property.imagefour_url %>
+                </div>
+                <div>
+                    <%= image_tag @property.imagefive_url %>
+                </div>
+            </div>
         </div>
+
+
 
         <div class="property-footer">
             <div class="description">
@@ -68,7 +135,22 @@
 
     <p><%= link_to 'Volver', properties_path %></p>
     <p><%= link_to 'Editar Propiedad', edit_property_path(@property) %></p>
+
+
 </div>
+
+
+<script>
+$(document).ready(function(){
+    $('.property-images-slider').slick({
+        dots: true,
+        fade: true,
+        speed: 1000,
+        arrows: false,
+        autoplay: true
+    });
+});
+</script>
 
 
 

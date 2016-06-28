@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160627220647) do
+ActiveRecord::Schema.define(version: 20160628192453) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -65,6 +65,10 @@ ActiveRecord::Schema.define(version: 20160627220647) do
     t.boolean  "for_rent"
     t.boolean  "for_sale"
     t.string   "image"
+    t.string   "imagetwo"
+    t.string   "imagethree"
+    t.string   "imagefour"
+    t.string   "imagefive"
   end
 
 end

@@ -91,7 +91,7 @@
 .property-show {
 	@include outer-container;
 	
-	div {
+	div.property-header {
 		@include outer-container;
 
 		h2 {
@@ -120,10 +120,11 @@
 		}
 	}
 
-	div.property-container {
+	.property-container {
 		@include outer-container;
 
 		border: 2px solid $verde-claro;
+
 
 		.property-specs {
 			@include span-columns(4);
@@ -157,7 +158,7 @@
 			.price {
 				@include outer-container(100%);
 
-				padding-top: 291px;
+				padding-top: 52px;
 
 				div:first-child {
 					@include outer-container;
@@ -192,8 +193,21 @@
 			@include span-columns(8);
 			@include omega();
 
-			img {
+			.property-images-slider {
 				width: 100%;
+
+				.slick-dots li button:before {
+				    font-size: 16px;
+				}
+
+				.slick-dots li.slick-active button:before {
+				    opacity: .75;
+				    color: $verde-claro;
+				}
+
+				.slick-dots li button:before {
+				    color: white;
+				}
 			}
 		}
 
