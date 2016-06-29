@@ -28,6 +28,12 @@ $dropdown-arrow-top-distance: 0;
 	}
 }
 
+@include media(min-width 930px) {
+	.slicknav_menu {
+		display: none;
+	}
+}
+
 nav {
 	@include outer-container(100%);
 	border-bottom: 3px solid $verde-claro;

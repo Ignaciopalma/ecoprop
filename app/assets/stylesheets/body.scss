@@ -25,6 +25,20 @@
 					font-size: 5em;
 					margin-top: 190px;
 				}
+
+				@include media(max-width 400px) {
+					h2 {
+						font-size: 3em; 
+					}
+				}
+			}
+
+			@include media(max-width 400px) {
+
+				div {
+					height: 362px;
+					background-size: 404px 367px;
+				}
 			}
 
 			.slick-dots li button:before {
@@ -49,30 +63,60 @@
 			margin-top: -230px;
 			position: relative;
 
-			h3 {
+			div.contactar-title {
 				@include span-columns(9);
-				font-size: 23px;
-				position: absolute;
-				padding-top: 60px;
-	    		padding-left: 50px;
-			}
 
-			a {
-				text-decoration: none;
+				margin-top: -138px;
 
-				button.link {
-					@include span-columns(3);
-
-					background-color: #f1dc90;
-					text-decoration: none;
-					position: absolute;
-					margin-left: 1020px;
-					margin-top: 45px;
-					width: 189px;
-					padding: 20px;
-					color: $verde-musgo;
+				h3 {
+					font-size: 19px;
+					// position: absolute;
+					// padding-top: 60px;
+		    		padding-left: 45px;
 				}
 			}
+
+			div.contactar-button {
+				@include span-columns(3);
+
+				margin-top: -146px;
+				margin-left: 946px;
+
+				/** MEDIA **/
+
+				@include media(max-width 1247px) {
+					margin-left: 896px;
+				}
+
+				@include media(max-width 1174px) {
+					margin-left: 717px;
+				}
+
+				a {
+					text-decoration: none;
+
+					button.link {
+
+						width: 100%;
+						
+						background-color: #f1dc90;
+						text-decoration: none;
+						// position: absolute;
+						// margin-left: 1020px;
+						// margin-top: 45px;
+						width: 189px;
+						// padding: 20px;
+						color: $verde-musgo;
+					}
+				}
+			}
+		}
+
+
+		@include media(max-width 930px) {
+			.contactar {
+				display: none;
+			} 
 		}
 	}
 
