@@ -22,6 +22,12 @@ $dropdown-padding: 1em;
 $dropdown-distance-from-menu: 41px;
 $dropdown-arrow-top-distance: 0;
 
+@include media(max-width 930px) {
+	nav {
+		display: none;
+	}
+}
+
 nav {
 	@include outer-container(100%);
 	border-bottom: 3px solid $verde-claro;
@@ -58,6 +64,8 @@ nav {
    		width: 76.9%;
    		padding-left: 411px;
 
+   		/** MEDIA QUERIES **/
+
    		@include media(max-width 1341px){
    			padding-left: 300px;
    		}
@@ -67,9 +75,6 @@ nav {
    		}
 
 
-		// p {
-		// 	letter-spacing: 1.5px;
-		// }
 
 
     	.dropdown:nth-child(3) {
