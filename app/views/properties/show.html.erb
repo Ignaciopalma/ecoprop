@@ -94,19 +94,19 @@
         <div class="property-image">
             <div class="property-images-slider">
                 <div>
-                    <%= image_tag @property.image_url %>
+                    <%= image_tag @property.image_url(:regular) %>
                 </div>
                 <div>
-                    <%= image_tag @property.imagetwo_url %>
+                    <%= image_tag @property.imagetwo_url(:regular) %>
                 </div>
                 <div>
-                    <%= image_tag @property.imagethree_url %>
+                    <%= image_tag @property.imagethree_url(:regular) %>
                 </div>
                 <div>
-                    <%= image_tag @property.imagefour_url %>
+                    <%= image_tag @property.imagefour_url(:regular) %>
                 </div>
                 <div>
-                    <%= image_tag @property.imagefive_url %>
+                    <%= image_tag @property.imagefive_url(:regular) %>
                 </div>
             </div>
         </div>
@@ -147,7 +147,6 @@ $(document).ready(function(){
         fade: true,
         speed: 1000,
         arrows: false,
-        autoplay: true
     });
 });
 </script>

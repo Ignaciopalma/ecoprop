@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160628192453) do
+ActiveRecord::Schema.define(version: 20160629152336) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20160628192453) do
 
   create_table "properties", force: :cascade do |t|
     t.string   "address"
-    t.integer  "price"
+    t.integer  "price",           limit: 10
     t.text     "description"
     t.integer  "rooms"
     t.integer  "toilets"
@@ -57,11 +57,11 @@ ActiveRecord::Schema.define(version: 20160628192453) do
     t.boolean  "house"
     t.boolean  "apartment"
     t.boolean  "terrain"
-    t.integer  "common_expenses"
+    t.integer  "common_expenses", limit: 10
     t.string   "district"
     t.string   "city"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.boolean  "for_rent"
     t.boolean  "for_sale"
     t.string   "image"

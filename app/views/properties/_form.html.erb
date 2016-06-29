@@ -50,7 +50,7 @@
     <%= f.text_field :city, placeholder: "CIUDAD" %>
     </div>
     <div class="field">
-    <%= f.number_field :price, placeholder: "PRECIO" %>
+    <%= f.number_field :price, placeholder: "PRECIO", max: 5000000000 %>
     </div>
     <div class="field">
     <%= f.number_field :rooms, placeholder: "CANTIDAD DE PIEZAS" %>
