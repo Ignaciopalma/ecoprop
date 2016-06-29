@@ -7,7 +7,7 @@ CarrierWave.configure do |config|
     # region:                'us-west-2',                  # optional, defaults to 'us-east-1'
     # endpoint:              's3-us-west-2.amazonaws.com' # optional, defaults to nil
   }
-  config.fog_directory  = ENV["AWS_BUCKET"]                          # required
+  config.fog_directory  = ENV["AWS_BUCKET_NAME"]                          # required
   # config.fog_public     = false                                        # optional, defaults to true
   # config.fog_attributes = { 'Cache-Control' => "max-age=#{365.day.to_i}" } # optional, defaults to {}
 end
