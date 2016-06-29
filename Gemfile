@@ -13,6 +13,7 @@ gem 'neat'
 gem 'bitters'
 gem 'devise'
 gem 'carrierwave'
+gem "fog-aws"
 
 group :development, :test do
 	gem 'byebug'

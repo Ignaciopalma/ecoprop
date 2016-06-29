@@ -292,10 +292,14 @@
 
 			margin: 35px 0;
 			border: 1px solid $verde-claro;
-			padding: 10px;
+			padding: 26px 10px;
 			
 			div.field {
 				@include span-columns(4);
+
+				label {
+					margin-bottom: -0.625em;
+				}
 			}
 		}
 
@@ -304,10 +308,14 @@
 
 			margin: 35px 0;
 			border: 1px solid $verde-claro;
-			padding: 10px;
+			padding: 26px 10px;
 
 			div.field {
 				@include span-columns(6);
+
+				label {
+					margin-bottom: -0.625em;
+				}
 			}
 		}
 
@@ -321,10 +329,14 @@
 			@include outer-container;
 
 			border: 1px solid $verde-claro;
-			padding: 10px;
+			padding: 26px 10px;
 
-			.field {
+			div.field {
 				@include span-columns(4);
+
+				label {
+					margin-bottom: -0.625em;
+				}
 			}
 		}
 
@@ -333,7 +345,11 @@
 			margin: 40px 0;
 
 			.field {
-				margin: 20px 0 20px 44%;
+				margin: 20px 0 20px 30%;
+
+				input {
+					width: 55%;
+				}
 			}
 		}
 
@@ -343,7 +359,6 @@
 
 		form {
 			input#property_image {
-				background: transparent;
 			}
 		}
 	}

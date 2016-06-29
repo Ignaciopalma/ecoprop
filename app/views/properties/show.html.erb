@@ -26,11 +26,11 @@
                 </div>
                 <div>
                     <h5>Superficie Total</h5>
-                    <p><%= @property.total_area %> m2</p>
+                    <p><%= number_with_delimiter(@property.total_area, delimiter: ".") %> m2</p>
                 </div>
                 <div>
                     <h5>Superficie Construida</h5>
-                    <p><%= @property.house_area %> m2</p>
+                    <p><%= number_with_delimiter(@property.house_area, delimiter: ".") %> m2</p>
                 </div>
                 <div>
                     <h5>Nº de Dormitorios:</h5>
@@ -66,7 +66,7 @@
                 </div>
                 <div>
                     <h5>Gastos Comunes:</h5>
-                    <p><%= @property.common_expenses %> (aprox)</p>
+                    <p>$ <%= number_with_delimiter(@property.common_expenses, delimiter: ".") %> (aprox)</p>
                 </div>
                 <div>
                     <h5>Amoblado:</h5>
