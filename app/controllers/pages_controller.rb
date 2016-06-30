@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+	before_action :authenticate_admin!, except: [ :index, :about, :contact ]
+	
 	def index
 	end
 

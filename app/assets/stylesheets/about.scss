@@ -1,0 +1,52 @@
+.about-page {
+	@include outer-container(100%);
+
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+	article {
+		@include span-columns(8);
+
+		padding: 3% 7% 7% 7%;
+
+		h1 {
+			text-align: left;
+			font-size: 1.4em;
+			font-weight: bold;
+		}
+
+		h1.title {
+			margin: 0 0 104px -10px;
+			font-weight: bold;
+			text-shadow: 2px 2px #7e7f7f;
+		}
+
+		h2 {
+			font-size: 1.4em;
+		}
+
+		p {
+			font-weight: bold;
+		}
+
+		.mision, 
+		.vision {
+			margin-top: 40px;
+		}
+
+	}
+
+	aside {
+		@include span-columns(4);
+
+		margin-top: 45px;
+
+		div {
+			img {
+				width: 50%;
+				padding: 6%;
+				margin-left: 25%;
+			}
+		}
+	}
+}
