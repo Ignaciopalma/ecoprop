@@ -28,63 +28,26 @@
 		<% @property_image.each do |i| %>
 		<div>
 			<%= image_tag i.image_url %>
-			<h3>VENTA DE CASA DE CAMPO</h3>
-			<p>DARIO URZUA</p>
-			<p>250 UF</p>
-			<p>200 m2</p>
-		</div>
-		<div>
-			<%= image_tag i.image_url %>
-			<h3>VENTA DE CASA DE CAMPO</h3>
-			<p>DARIO URZUA</p>
-			<p>250 UF</p>
-			<p>200 m2</p>
-		</div>
-		<div>
-			<%= image_tag i.image_url %>
-			<h3>VENTA DE CASA DE CAMPO</h3>
-			<p>DARIO URZUA</p>
-			<p>250 UF</p>
-			<p>200 m2</p>
-		</div>
-		<div>
-			<%= image_tag i.image_url %>
-			<h3>VENTA DE CASA DE CAMPO</h3>
-			<p>DARIO URZUA</p>
-			<p>250 UF</p>
-			<p>200 m2</p>
-		</div>
-		<div>
-			<%= image_tag i.image_url %>
-			<h3>VENTA DE CASA DE CAMPO</h3>
-			<p>DARIO URZUA</p>
-			<p>250 UF</p>
-			<p>200 m2</p>
+			<h3> 
+				<% if i.house == true %>
+					CASA
+				<% elsif i.apartment == true %>
+					DEPARTAMENTO
+				<% elsif i.terrain == true %>
+					TERRENO
+				<% end %>  
+
+				<% if i.for_sale == true %>
+	                EN VENTA
+	            <% else %>
+	                EN ARRIENDO
+	            <% end %>
+            </h3>
+			<p><%= i.district %>, <%= i.city %></p>
+			<p><%= i.total_area %> m2</p>
 		</div>
 		<% end %>
 	</div>
-
-<!-- 	<h2>COMUNAS</h2>
-	<div class="comunas">
-		<div>
-			<img src="https://s3-us-west-2.amazonaws.com/ecoprop/parcela.jpg" alt="">
-		</div>
-		<div>
-			<img src="https://s3-us-west-2.amazonaws.com/ecoprop/cerro.jpg" alt="">
-		</div>
-		<div>
-			<img src="https://s3-us-west-2.amazonaws.com/ecoprop/campo.jpg" alt="">
-		</div>
-		<div>
-			<img src="https://s3-us-west-2.amazonaws.com/ecoprop/parcela.jpg" alt="">
-		</div>
-		<div>
-			<img src="https://s3-us-west-2.amazonaws.com/ecoprop/cerro.jpg" alt="">
-		</div>
-		<div>
-			<img src="https://s3-us-west-2.amazonaws.com/ecoprop/campo.jpg" alt="">
-		</div>
-	</div> -->
 </div>
 
 <script>
