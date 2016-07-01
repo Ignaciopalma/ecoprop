@@ -25,51 +25,46 @@
 	<h2>PROPIEDADES DESTACADAS</h2>	
 
 	<div class="propiedades-destacadas">
+		<% @property_image.each do |i| %>
 		<div>
-			<img src="https://s3-us-west-2.amazonaws.com/ecoprop/parcela.jpg" alt="">
+			<%= image_tag i.image_url %>
 			<h3>VENTA DE CASA DE CAMPO</h3>
 			<p>DARIO URZUA</p>
 			<p>250 UF</p>
 			<p>200 m2</p>
 		</div>
 		<div>
-			<img src="https://s3-us-west-2.amazonaws.com/ecoprop/cerro.jpg" alt="">
+			<%= image_tag i.image_url %>
 			<h3>VENTA DE CASA DE CAMPO</h3>
 			<p>DARIO URZUA</p>
 			<p>250 UF</p>
 			<p>200 m2</p>
 		</div>
 		<div>
-			<img src="https://s3-us-west-2.amazonaws.com/ecoprop/campo.jpg" alt="">
+			<%= image_tag i.image_url %>
 			<h3>VENTA DE CASA DE CAMPO</h3>
 			<p>DARIO URZUA</p>
 			<p>250 UF</p>
 			<p>200 m2</p>
 		</div>
 		<div>
-			<img src="https://s3-us-west-2.amazonaws.com/ecoprop/parcela.jpg" alt="">
+			<%= image_tag i.image_url %>
 			<h3>VENTA DE CASA DE CAMPO</h3>
 			<p>DARIO URZUA</p>
 			<p>250 UF</p>
 			<p>200 m2</p>
 		</div>
 		<div>
-			<img src="https://s3-us-west-2.amazonaws.com/ecoprop/cerro.jpg" alt="">
+			<%= image_tag i.image_url %>
 			<h3>VENTA DE CASA DE CAMPO</h3>
 			<p>DARIO URZUA</p>
 			<p>250 UF</p>
 			<p>200 m2</p>
 		</div>
-		<div>
-			<img src="https://s3-us-west-2.amazonaws.com/ecoprop/campo.jpg" alt="">
-			<h3>VENTA DE CASA DE CAMPO</h3>
-			<p>DARIO URZUA</p>
-			<p>250 UF</p>
-			<p>200 m2</p>
-		</div>
+		<% end %>
 	</div>
 
-	<h2>COMUNAS</h2>
+<!-- 	<h2>COMUNAS</h2>
 	<div class="comunas">
 		<div>
 			<img src="https://s3-us-west-2.amazonaws.com/ecoprop/parcela.jpg" alt="">
@@ -89,7 +84,7 @@
 		<div>
 			<img src="https://s3-us-west-2.amazonaws.com/ecoprop/campo.jpg" alt="">
 		</div>
-	</div>
+	</div> -->
 </div>
 
 <script>
