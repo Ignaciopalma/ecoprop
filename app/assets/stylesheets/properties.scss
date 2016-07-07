@@ -30,7 +30,7 @@
 			border: 3px solid $verde-claro;
 		}
 
-		div {
+		div.properties-info {
 			@include span-columns(9);
 			@include omega();
 
@@ -63,15 +63,41 @@
 				color: white;
 			}
 
-			button {
+			div.crud-buttons {
 				@include span-columns(6);
+				@include outer-container;
 
-				width: 25%;
-				margin-left: 75px;
-    			margin-top: 20px;
-    			height: 42px;
-    			background-color: $verde-claro;
-    			border: 1px solid rgba(5, 93, 5, 1);
+				button {
+					@include span-columns(12);
+
+					width: 61%;
+					margin-left: 75px;
+	    			margin-top: 20px;
+	    			margin-bottom: 15px;
+	    			height: 42px;
+	    			background-color: $verde-claro;
+	    			border: 1px solid rgba(5, 93, 5, 1);
+				}
+
+				a.edit-button {
+					@include span-columns(3);
+					@include shift(3);
+
+					background-color: blue;
+					text-align: center;
+					border-radius: 5px;
+					margin-left: 23.5%;
+
+				}
+
+				a.delete-button {
+					@include span-columns(3);
+					@include omega();
+
+					background-color: red;
+					text-align: center;
+					border-radius: 5px;
+				}
 			}
 		}
 	}
@@ -336,6 +362,23 @@
 
 				label {
 					margin-bottom: -0.625em;
+				}
+			}
+		}
+
+		.property-highlight {
+			border: 1px solid $verde-claro;
+			padding: 26px 10px;
+			margin-top: 33px;
+
+			div.field {
+
+				label {
+					margin-bottom: -0.625em;
+				}
+
+				input[type="checkbox"] {
+					margin-left: 49.5%;
 				}
 			}
 		}

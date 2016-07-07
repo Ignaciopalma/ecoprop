@@ -7,6 +7,10 @@ Rails.application.routes.draw do
 
   get 'rents/terrain'
 
+  get 'rents/index'
+
+  get 'sales/index'
+
   get 'sales/house'
 
   get 'sales/apartment'

@@ -10,7 +10,7 @@
 		<div class="list-container">    
 		    <%= image_tag property.image_url %>
 
-		    <div>
+		    <div class="properties-info">
 		        <div class="properties-title">
 		            <h2><%= property.address %>, <%= property.district %>, <%= property.city %></h2>
 		            <h3><%= property.description %></h3>
@@ -23,14 +23,15 @@
 		            <p>Baños: <%= property.toilets %></p>
 		        </div>
 
-			    <%= link_to property do %>
-			        <button>VER PROPIEDAD</button>
-			    <% end %>
-
-				<% if admin_signed_in? %>
-			        <%= link_to 'Edit', edit_property_path(property) %>
-			        <%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %>
-		        <% end %>
+	            <div class="crud-buttons">
+	                <button>
+	                    <%= link_to "VER PROPIEDAD", property %>
+	                </button>
+	                <% if admin_signed_in? %>     
+		                <%= link_to 'Edit', edit_property_path(property), class: "edit-button" %>
+		                <%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete-button" %>
+	                <% end %>
+	            </div>
 		    </div>
 		</div>
 		<% end %>

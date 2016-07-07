@@ -1,4 +1,9 @@
 class RentsController < ApplicationController
+
+	def index
+		@properties_for_rent = Property.where(:for_rent => true)
+	end
+
 	def house
 		@houses_for_rent = Property.where(:house => true, :for_rent => true)
 	end

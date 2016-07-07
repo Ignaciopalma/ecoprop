@@ -1,5 +1,9 @@
 class SalesController < ApplicationController
 
+	def index
+		@properties_for_sale = Property.where(:for_sale => true)
+	end
+
 	def house
 		@houses_for_sale = Property.where(house: true, for_sale: true)
 	end
