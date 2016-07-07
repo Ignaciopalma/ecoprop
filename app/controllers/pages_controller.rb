@@ -2,7 +2,7 @@ class PagesController < ApplicationController
 	before_action :authenticate_admin!, except: [ :index, :about, :contact ]
 	
 	def index
-		@property_image = Property.all
+		@property_highlight = Property.where(highlight: true)
 	end
 
 	def about
