@@ -58,13 +58,12 @@ nav {
 		width: 19%;
 	}
 
-
 	.nav-links {
 		@include span-columns(10);
 		@include omega();
 
 		padding-top: 26px;
-    	padding-left: 541px;
+    	// padding-left: 541px;
    	    font-size: 13px;
    		font-weight: bold;
    		width: 76.9%;
@@ -73,11 +72,11 @@ nav {
    		/** MEDIA QUERIES **/
 
    		@include media(max-width 1341px){
-   			padding-left: 300px;
+   			padding-left: 200px;
    		}
 
-   		@include media(max-width 1192px) {
-   			padding-left: 100px;
+   		@include media(max-width 1256px) {
+   			padding-left: 69px;
    		}
 
 
@@ -120,6 +119,16 @@ nav {
 
 	.nav-links#admin-nav {
 		padding-left: 250px;
+
+		//padding-top: 0;
+
+		@include media(max-width 1341px){
+   			padding-left: 200px;
+   		}
+
+   		@include media(max-width 1256px) {
+   			padding-left: 69px;
+   		}
 
 		.dropdown:nth-child(2) {
 			.dropdown-container {

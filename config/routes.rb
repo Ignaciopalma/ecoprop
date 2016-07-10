@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :uf_prices
   devise_for :admins, controllers: { registrations: "registrations"}
   get 'rents/house'
 

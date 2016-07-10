@@ -1,0 +1,21 @@
+<%= form_for(@uf_price) do |f| %>
+  <% if @uf_price.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@uf_price.errors.count, "error") %> prohibited this uf_price from being saved:</h2>
+
+      <ul>
+      <% @uf_price.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field uf-input">
+    <%#= f.label :uf_price %><br>
+    <%= f.text_field :uf_price, placeholder: @uf_price_placeholder %>
+  </div>
+  <div class="actions uf-submit">
+    <%= f.submit value: "Cambiar UF" %>
+  </div>
+<% end %>

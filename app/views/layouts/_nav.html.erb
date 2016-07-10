@@ -1,3 +1,4 @@
+
 <nav>
 	<div class="logo">
 	<%= link_to root_path do %>
@@ -7,6 +8,7 @@
 
 	<% if admin_signed_in? %>
 	<div class="nav-links" id="admin-nav">
+		
 		<div class="dropdown">
 			<%= link_to root_path do %>
 			<div class="dropdown-container">
@@ -86,6 +88,8 @@
 			</div>
 			<% end %>
 		</div>
+
+
 	</div>
 
 	<% else %>
@@ -164,6 +168,7 @@
 		</div>
 	</div>
 	<% end %>
+
 
 
 </nav>

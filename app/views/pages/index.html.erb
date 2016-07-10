@@ -21,31 +21,41 @@
 			</div>
 		</div>
 	</div>
-
+	
+	<% if admin_signed_in? %>
+	<div class="edit-uf">
+		<h2>Actualizar Precio UF</h2>
+		<%= render 'uf_prices/form' %>
+	</div>
+	<% end %>
+	
 	<h2>PROPIEDADES DESTACADAS</h2>	
 
-	<div class="propiedades-destacadas">
-		<% @property_highlight.each do |i| %>
-		<div>
-			<%= image_tag i.image_url %>
-			<h3> 
-				<% if i.house == true %>
-					CASA
-				<% elsif i.apartment == true %>
-					DEPARTAMENTO
-				<% elsif i.terrain == true %>
-					TERRENO
-				<% end %>  
 
-				<% if i.for_sale == true %>
-	                EN VENTA
-	            <% else %>
-	                EN ARRIENDO
-	            <% end %>
-            </h3>
-			<p><%= i.district %>, <%= i.city %></p>
-			<p><%= i.total_area %> m2</p>
-		</div>
+	<div class="propiedades-destacadas" id="destacadas">
+		<% @property_highlight.each do |i| %>
+			<%#= link_to i do %>
+			<div class="highlight_property_thumbnail">
+				<%= image_tag i.image_url, class: "highlight_image" %>
+				<h3> 
+					<% if i.house == true %>
+						CASA
+					<% elsif i.apartment == true %>
+						DEPARTAMENTO
+					<% elsif i.terrain == true %>
+						TERRENO
+					<% end %>  
+
+					<% if i.for_sale == true %>
+		                EN VENTA
+		            <% else %>
+		                EN ARRIENDO
+		            <% end %>
+	            </h3>
+				<p><%= i.district %>, <%= i.city %></p>
+				<p><%= i.total_area %> m2</p>
+			</div>
+			<%# end %>
 		<% end %>
 	</div>
 </div>
