@@ -3,7 +3,134 @@
 	<h1>Editing Property</h1>
 
 	<div class="form-panel">
-		<%= render 'form' %>
+		<%= form_for(@property) do |f| %>
+		    <% if @property.errors.any? %>
+		    <div id="error_explanation">
+		        <h2><%= pluralize(@property.errors.count, "error") %> prohibited this property from being saved:</h2>
+
+		        <ul>
+		        <% @property.errors.full_messages.each do |message| %>
+		        <li><%= message %></li>
+		        <% end %>
+		        </ul>
+		    </div>
+		    <% end %>
+
+		<div class="property-type">
+		    <h2>Tipo de Propiedad</h2>
+		    <div class="field">
+		    <%= f.label "Casa" %><br>
+		    <%= f.check_box :house %>
+		    </div>
+		    <div class="field">
+		    <%= f.label "Departamento" %><br>
+		    <%= f.check_box :apartment %>
+		    </div>
+		    <div class="field">
+		    <%= f.label "Terreno" %><br>
+		    <%= f.check_box :terrain %>
+		    </div>
+		</div>
+
+		<div class="property-state">
+		    <h2>Estado de la Propiedad</h2>
+		    <div class="field">
+		    <%= f.label "En Venta" %><br>
+		    <%= f.check_box :for_sale %>
+		    </div>
+		    <div class="field">
+		    <%= f.label "En Arriendo" %><br>
+		    <%= f.check_box :for_rent %>
+		    </div>
+		</div>
+
+		<div class="property-details">
+		    <div class="field">
+		    <%= f.text_field :address, placeholder: "DIRECCION" %>
+		    </div>
+		    <div class="field">
+		    <%= f.text_field :district, placeholder: "COMUNA" %>
+		    </div>
+		    <div class="field">
+		    <%= f.text_field :city, placeholder: "CIUDAD" %>
+		    </div>
+		    <div class="field">
+		    <%= f.number_field :price, placeholder: "PRECIO", max: 5000000000 %>
+		    </div>
+		    <div class="field">
+		    <%= f.number_field :rooms, placeholder: "CANTIDAD DE PIEZAS" %>
+		    </div>
+		    <div class="field">
+		    <%= f.number_field :toilets, placeholder: "CANTIDAD DE BAÑOS" %>
+		    </div>
+		    <div class="field">
+		    <%= f.number_field :floors, placeholder: "CANTIDAD DE PISOS" %>
+		    </div>
+		   <div class="field">
+		    <%= f.number_field :parking, placeholder: "CANTIDAD DE ESTACIONAMIENTOS" %>
+		    </div>
+		    <div class="field">
+		    <%= f.number_field :total_area, placeholder: "SUPERFICIE TOTAL" %>
+		    </div>
+		    <div class="field">
+		    <%= f.number_field :house_area, placeholder: "SUPERFICIE CONTRUIDA" %>
+		    </div>
+		    <div class="field">
+		    <%= f.number_field :common_expenses, placeholder: "PROMERDIO DE GASTOS COMUNES" %>
+		    </div>
+		    <div class="field">
+		    <%= f.text_area :description, placeholder: "DESCRIPCION", rows: "7", cols: "50" %>
+		    </div>
+		</div>
+
+		<div class="property-extras">
+		    <h2>Extras</h2>
+		    <div class="field">
+		    <%= f.label :piscina %><br>
+		    <%= f.check_box :pool %>
+		    </div>
+		    <div class="field">
+		    <%= f.label :amoblado %><br>
+		    <%= f.check_box :furnished %>
+		    </div>
+		 
+		    <div class="field">
+		    <%= f.label :bodega %><br>
+		    <%= f.check_box :cellar %>
+		    </div>
+		</div>
+
+		<div class="property-highlight">
+		    <h2>Propiedad Destacada</h2>
+		    <div class="field">
+		    <%= f.label :destacada %><br>
+		    <%= f.check_box :highlight %>
+		    </div>
+		</div>
+
+		<div class="property-image">
+		    <h2>Cargar Imagen</h2>
+		    <div class="field">
+		    <%= f.file_field :image %>
+		    </div>
+		    <div class="field">
+		    <%= f.file_field :imagetwo %>
+		    </div>
+		    <div class="field">
+		    <%= f.file_field :imagethree %>
+		    </div>
+		    <div class="field">
+		    <%= f.file_field :imagefour %>
+		    </div>
+		    <div class="field">
+		    <%= f.file_field :imagefive %>
+		    </div>
+		</div>
+		  
+		  <div class="actions">
+		    <%= f.submit value: "Actualizar Propiedad" %>
+		  </div>
+		<% end %>
 	</div>
 </div>
 

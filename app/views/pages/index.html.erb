@@ -34,7 +34,7 @@
 
 	<div class="propiedades-destacadas" id="destacadas">
 		<% @property_highlight.each do |i| %>
-			<%#= link_to i do %>
+			<%= link_to i do %>
 			<div class="highlight_property_thumbnail">
 				<%= image_tag i.image_url, class: "highlight_image" %>
 				<h3> 
@@ -55,7 +55,7 @@
 				<p><%= i.district %>, <%= i.city %></p>
 				<p><%= i.total_area %> m2</p>
 			</div>
-			<%# end %>
+			<% end %>
 		<% end %>
 	</div>
 </div>
