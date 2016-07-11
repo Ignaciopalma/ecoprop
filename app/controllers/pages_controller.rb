@@ -4,7 +4,7 @@ class PagesController < ApplicationController
 	def index
 		@property_highlight = Property.where(highlight: true)
 		@uf_price = UfPrice.new
-		if UfPrice.last.uf_price == nil
+		if UfPrice == nil
 			@uf_price_placeholder = 1
 		else
 			@uf_price_placeholder = UfPrice.last.uf_price
