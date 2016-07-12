@@ -1,12 +1,21 @@
 var image = document.getElementsByClassName("highlight_image");
-var destacadas = document.getElementById("destacadas");
-var imageButton = ("<button></button>");
-var imageParent = document.getElementsByClassName("highlight_property_thumbnail");
 
-var test = function() {
-	console.log("appendChild..");
-}
+for (i = 0; i < image.length; i++) { 
+    var eachImage = document.getElementsByClassName("highlight_image")[i];
+	var imageButton = document.createElement("button");
+	var text = document.createTextNode("VER PROPIEDAD");
 
-for(var i = 0; i < image.length; i++) {
-	image[i].onclick = test;
+	var run = function() {
+		imageButton.appendChild(text);
+		imageButton.className = "ver-propiedad";
+		this.parentNode.insertBefore(imageButton, this.nextSibling);
+	}
+
+	var stop = function() {
+		imageButton.removeChild(text);
+		this.parentNode.removeChild(imageButton);
+	}
+
+	eachImage.onmouseover = run;
+	eachImage.onmouseout = stop;
 }
