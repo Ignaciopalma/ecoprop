@@ -26,8 +26,10 @@
 	                <%= link_to property do%>
 	                <button>VER PROPIEDAD</button>
 	                <% end %>
-	                <%= link_to 'Editar', edit_property_path(property), class: "edit-button" %>
-	                <%= link_to 'Destruir', property, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete-button" %>
+	                <% if admin_signed_in? %>
+	               		<%= link_to 'Editar', edit_property_path(property), class: "edit-button" %>
+	                	<%= link_to 'Destruir', property, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete-button" %>
+	                <% end %>
 	            </div>
 		    </div>
 		</div>

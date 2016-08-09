@@ -6,6 +6,7 @@ class PropertiesController < ApplicationController
   def index
     @properties = Property.all
     @uf_price = UfPrice.last.uf_price
+
   end
 
   def show

@@ -28,6 +28,20 @@
 		<%= render 'uf_prices/form' %>
 	</div>
 	<% end %>
+
+	<script>
+		var ufInput = document.getElementById("uf_price_uf_price");
+		var ufSubmit = document.getElementsByClassName("uf-submit")[0].children[0];
+
+		ufInput.addEventListener("keyup", function() {
+			if (ufInput.value > 20000 && ufInput.value < 30000) {
+				console.log("uf disabled working..");
+				ufSubmit.removeAttribute("disabled");
+			} else {
+				ufSubmit.setAttribute("disabled", "disabled");
+			}
+		});	
+	</script>
 	
 	<h2>PROPIEDADES DESTACADAS</h2>	
 
