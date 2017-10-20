@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20160710214006) do
 
   create_table "properties", force: :cascade do |t|
     t.string   "address"
-    t.integer  "price",           limit: 10
+    t.integer  "price",           limit: 6
     t.text     "description"
     t.integer  "rooms"
     t.integer  "toilets"
@@ -57,11 +57,11 @@ ActiveRecord::Schema.define(version: 20160710214006) do
     t.boolean  "house"
     t.boolean  "apartment"
     t.boolean  "terrain"
-    t.integer  "common_expenses", limit: 10
+    t.integer  "common_expenses", limit: 6
     t.string   "district"
     t.string   "city"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.boolean  "for_rent"
     t.boolean  "for_sale"
     t.string   "image"

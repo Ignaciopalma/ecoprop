@@ -4,7 +4,8 @@ class PagesController < ApplicationController
 	def index
 		@property_highlight = Property.where(highlight: true)
 		@uf_price = UfPrice.new
-		@uf_price_placeholder = UfPrice.last.uf_price
+		# @uf_price_placeholder = UfPrice.last.uf_price
+		@uf_price_placeholder = 41234
 	end
 
 	def about

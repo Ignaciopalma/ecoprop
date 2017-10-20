@@ -1,11 +1,14 @@
 class SalesController < ApplicationController
-
+	require 'json'
 	def index
 		@properties_for_sale = Property.where(:for_sale => true)
 	end
 
 	def house
-		@houses_for_sale = Property.where(house: true, for_sale: true)
+		# @houses_for_sale = Property.where(house: true, for_sale: true)
+		data = JSON.parse(File.read('app/assets/javascripts/json-properties.json'))
+		puts data
+		@houses_for_sale = JSON.parse(File.read('app/assets/javascripts/json-properties.json'))
 	end
 
 	def apartment
