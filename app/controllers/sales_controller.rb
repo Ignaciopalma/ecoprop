@@ -5,10 +5,9 @@ class SalesController < ApplicationController
 	end
 
 	def house
-		# @houses_for_sale = Property.where(house: true, for_sale: true)
-		data = JSON.parse(File.read('app/assets/javascripts/json-properties.json'))
-		puts data
-		@houses_for_sale = JSON.parse(File.read('app/assets/javascripts/json-properties.json'))
+		@houses_for_sale = Property.where(house: true, for_sale: true)
+		# data = JSON.parse(File.read('app/assets/javascripts/json-properties.json'))		
+		# @houses_for_sale = JSON.parse(File.read('app/assets/javascripts/json-properties.json'))
 	end
 
 	def apartment
