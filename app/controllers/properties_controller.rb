@@ -11,6 +11,8 @@ class PropertiesController < ApplicationController
 
   def show
     @uf_price = UfPrice.last.uf_price
+    puts 'hello world'
+    puts @property
   end
 
   def new
