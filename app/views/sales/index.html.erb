@@ -6,7 +6,7 @@
 
     <% @properties_for_sale.each do |property| %>
     <div class="list-container">    
-        <%= image_tag property.image_url %>
+        <img src="<%= property.image %>" alt="image">
 
         <div class="properties-info">
 
