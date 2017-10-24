@@ -49,8 +49,8 @@
 	<div class="propiedades-destacadas" id="destacadas">
 		<% @property_highlight.each do |i| %>
 			<%= link_to i do %>
-			<div class="highlight_property_thumbnail">
-				<%= image_tag i.image_url, class: "highlight_image" %>
+			<div class="highlight_property_thumbnail">				
+				<img src="<%= i.image %>" alt="highlight" class="highlight_image">
 				<h3> 
 					<% if i.house == true %>
 						CASA

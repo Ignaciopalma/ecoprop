@@ -5,9 +5,8 @@
     <h1>TODAS LAS PROPIEDADES</h1>
 
     <% @properties.each do |property| %>
-    <div class="list-container">    
-        <%= image_tag property.image_url %>
-
+    <div class="list-container">            
+        <img src="<%= property.image %>" alt="property">
         <div class="properties-info">
 
             <div class="properties-title">
