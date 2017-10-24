@@ -6,7 +6,7 @@
 
     <% @properties.each do |property| %>
     <div class="list-container">            
-        <img src="<%= property.image %>" alt="property">
+        <img src="<%= property.image %>" alt="property" id="<% embed =  "property-#{property.id}" %>">
         <div class="properties-info">
 
             <div class="properties-title">
@@ -37,3 +37,9 @@
 </div>
 
 <%= link_to 'New Property', new_property_path %>
+
+<script>
+    $(document).ready(function() {
+        $('#property-28').css('transform', 'rotate(90deg)');
+    })
+</script>
