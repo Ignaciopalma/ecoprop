@@ -9,6 +9,7 @@
 
 		<% @terrains_for_sale.each do |property| %>
 		<div class="list-container">    
+			<% if property.image %>
 		    <%= image_tag property.image_url %>
 
 		    <div class="properties-info">
@@ -34,6 +35,7 @@
 	                <% end %>
 	            </div>
 		    </div>
+			<% end %>
 		</div>
 		<% end %>
 
